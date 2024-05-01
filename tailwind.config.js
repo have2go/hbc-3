@@ -27,12 +27,20 @@ module.exports = withMT({
                 "2XL": { max: "1600px" },
                 // => @media (max-width: 1536px) { ... }
 
+                "2xl": { min: "1601px" },
+                // => @media (max-width: 1536px) { ... }
+
                 "1.5XL": { max: "1400px" },
                 // => @media (max-width: 1400px) { ... }
+                "1.5xl": { min: "1401px" },
 
+                // => @media (max-width: 1400px) { ... }
                 XL: { max: "1280px" },
+                xl: { min: "1281px" },
                 // => @media (max-width: 1280px) { ... }
-
+                '1200max': { max: "1200px" },
+                '1201min': { min: "1201px" },
+                // => @media (max-width: 1400px) { ... }
                 LG: { max: "1024px" },
                 // => @media (max-width: 1024px) { ... }
 
@@ -40,7 +48,8 @@ module.exports = withMT({
 
                 MD: { max: "768px" },
                 // => @media (max-width: 768px) { ... }
-
+                md: { min: "761px" },
+                // => @media (max-width: 768px) { ... }
                 "1.5SM": { max: "600px" },
                 // => @media (max-width: 480px) { ... }
 

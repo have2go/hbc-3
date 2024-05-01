@@ -56,9 +56,10 @@ export const cardsS = [
         title: "Акцизные товары",
         text: (
             <p className="mt-5 mb-5 text-[15px] leading-[120%] 2XL:mt-3 SM:mt-2 SM:text-sm">
-                If your products include alcohol, tobacco, or other excisable goods, we offer specialized customs
-                clearance services to facilitate their market entry. We handle all necessary documentation, ensure
-                accurate duty calculations, and coordinate with customs authorities to meet all regulatory requirements.
+                Если ваша продукция включает алкоголь, табак или другие подакцизные товары, мы предлагаем
+                специализированные услуги по таможенному оформлению для облегчения её вывода на рынок. Мы оформляем всю
+                необходимую документацию, обеспечиваем точный расчет пошлин и координируем свои действия с таможенными
+                органами для соблюдения всех нормативных требований.
             </p>
         ),
     },

@@ -2,23 +2,14 @@ import Image from "next/image";
 import logo from "/public/hbc-white.svg";
 import Link from "next/link";
 import { SidebarWithBurgerMenu } from "../SidebarWithBurgerMenu";
-import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
-    const [is15XL, setIs15XL] = useState(false);
-    const [isXL, setIsXL] = useState(false);
     const pathname = usePathname();
-    console.log(pathname);
 
-    useEffect(() => {
-        setIs15XL(window.innerWidth <= 1400);
-        setIsXL(window.innerWidth <= 1200);
-    }, []);
-
-    if (!is15XL) {
-        return (
-            <header className="flex justify-between items-center gap-3">
+    return (
+        <>
+            <header className="flex justify-between items-center gap-3 1.5XL:hidden">
                 <div className="flex flex-col w-64 text-white">
                     <div className="flex gap-1 text-sm">
                         <button>RU</button>
@@ -67,12 +58,7 @@ export default function Header() {
                     <p className="">+7(812) 600-48-49 (доб. 209)</p>
                 </div>
             </header>
-        );
-    }
-
-    if (is15XL && !isXL) {
-        return (
-            <header className="flex flex-col">
+            <header className="flex flex-col 1200max:hidden 1.5xl:hidden">
                 <div className="flex justify-between">
                     <div className="flex flex-col w-64 XL:w-56 text-white">
                         <div className="flex gap-1 text-sm">
@@ -116,12 +102,7 @@ export default function Header() {
                     </div>
                 </div>
             </header>
-        );
-    }
-
-    if (isXL) {
-        return (
-            <header className="flex justify-between items-center">
+            <header className="flex justify-between items-center 1201min:hidden">
                 <div className="flex flex-col w-64 XL:w-56 SM:w-[200px] text-white">
                     <div className="flex gap-1 text-sm SM:text-xs">
                         <button>RU</button>
@@ -137,6 +118,6 @@ export default function Header() {
                 </div>
                 <SidebarWithBurgerMenu />
             </header>
-        );
-    }
+        </>
+    );
 }

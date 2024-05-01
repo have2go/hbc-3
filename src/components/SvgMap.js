@@ -27,30 +27,27 @@ import { useState } from "react";
 
 export default function SvgMap() {
     const [tooltipData, setTooltipData] = useState({ countryName: "", position: null });
-    let tooltipTimer;
-
-    const handleMouseOver = (event, countryName) => {
-      clearTimeout(tooltipTimer);
-      tooltipTimer = setTimeout(() => {
-        setTooltipData({ countryName, position: { x: event.clientX, y: event.clientY } });
-      }, 20); // Задержка в 200 миллисекунд
-    };
-    
-    const handleMouseOut = () => {
-      clearTimeout(tooltipTimer);
-      setTooltipData({ countryName: "", position: null });
-    };
-    
-
-    
+    // let tooltipTimer;
 
     // const handleMouseOver = (event, countryName) => {
+    //   clearTimeout(tooltipTimer);
+    //   tooltipTimer = setTimeout(() => {
     //     setTooltipData({ countryName, position: { x: event.clientX, y: event.clientY } });
+    //   }, 2); // Задержка в 200 миллисекунд
     // };
 
     // const handleMouseOut = () => {
-    //     setTooltipData({ countryName: "", position: null });
+    //   clearTimeout(tooltipTimer);
+    //   setTooltipData({ countryName: "", position: null });
     // };
+
+    const handleMouseOver = (event, countryName) => {
+        setTooltipData({ countryName, position: { x: event.clientX + 10, y: event.clientY + 10 } });
+    };
+
+    const handleMouseOut = () => {
+        setTooltipData({ countryName: "", position: null });
+    };
     return (
         <div className="">
             <svg viewBox="0 0 2480 1468" className="absolute top-0 left-0 h-auto">

@@ -22,16 +22,16 @@ export default function CardGrid() {
 
     return (
         <>
-            <div className="grid grid-cols-4 gap-[30px] 2xl:gap-4">
+            <div className="grid grid-cols-4 gap-[30px] 2XL:gap-4 XL:hidden">
                 {cardsS.map((card, i) => {
                     return <Card card={card} key={i} onOpen={onOpen} />;
                 })}
                 <div className=" flex flex-col box-border border-2 border-customYellow rounded-[21px] max-w-[400px]">
                     <form
-                        className="flex flex-col items-center px-5 py-7 gap-6 2xl:gap-4 2xl:py-5"
+                        className="flex flex-col items-center px-5 py-7 gap-6 2XL:gap-4 2XL:py-5"
                         onSubmit={onSubmitBtn}
                     >
-                        <p className="text-xl 2xl:text-lg">Оставить заявку на услугу</p>
+                        <p className="text-XL 2XL:text-lg">Оставить заявку на услугу</p>
                         <input
                             type="text"
                             className="bg-bgGray h-12 px-5 rounded focus:outline-customYellow w-full"
@@ -70,7 +70,7 @@ export default function CardGrid() {
                         </div>
                         <div className="flex gap-[10px] items-center">
                             <input type="checkbox" className="" required />
-                            <p className="text-[#909090] text-[13px] 2xl:text-[10px]">
+                            <p className="text-[#909090] text-[13px] 2XL:text-[10px]">
                                 Нажимая на кнопку, вы принимаете политику конфиденциальности и даете согласие на
                                 обработку персональных данных
                             </p>

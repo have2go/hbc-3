@@ -23,7 +23,7 @@ export default function Main() {
                     </h1>
                     <button
                         onClick={onOpen}
-                        className="bg-transparent text-3xl font-medium border-[5px] border-black rounded-[20px] w-full max-w-[505px] h-20 XL:h-16 XL:text-[26px] LG:text-2xl LG:max-w-[450px] SM:text-xl SM:border-[3px] MD:bg-white/60 SM:max-w-[300px]"
+                        className="bg-transparent text-3xl font-medium border-[5px] border-black rounded-[20px] w-full max-w-[505px] h-20 XL:h-16 XL:text-[26px] LG:text-2xl LG:max-w-[450px] MD:border-[3px] SM:text-xl SM:border-[2px] MD:bg-white/60 SM:max-w-[300px]"
                     >
                         Получите консультацию
                     </button>

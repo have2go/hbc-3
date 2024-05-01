@@ -18,7 +18,7 @@ export default function EmblaCarousel(props) {
 
     return (
         <>
-            <section className="embla">
+            <section className="embla xl:hidden">
                 <div className="embla__viewport" ref={emblaRef}>
                     <div className="embla__container">
                         {cardsS.map((card, i) => {

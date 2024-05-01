@@ -3,16 +3,15 @@ import Image from "next/image";
 
 import mainBg from "/public/main-bg.jpg";
 
-import About from "@/components/sections/About";
 import Main from "@/components/sections/Main";
 import PaymentAgent from "./components/PaymentAgent";
 import HowItWorks from "./components/HowItWorks";
-import Services from "@/components/sections/Services";
-import Form from "@/components/sections/Form";
-import Reviews from "@/components/sections/Reviews";
-import InternationalServices from "@/components/sections/InternationalServices";
+import ConsultForm from "./components/ConsultForm";
 import Footer from "@/components/common/Footer";
-import Geography from "@/components/sections/Geography";
+import Problems from "./components/Problems";
+import GoodSides from "./components/GoodSides";
+import YellowForm from "./components/YellowForm";
+import PaymentAgentSeo from "./components/PaymentAgentSeo";
 
 
 export default function Home() {
@@ -26,12 +25,11 @@ export default function Home() {
             <Main />
             <PaymentAgent />
             <HowItWorks />
-            {/* <Services />
-            <About />
-            <Geography />
-            <Form />
-            <Reviews />
-            <InternationalServices /> */}
+            <ConsultForm />
+            <Problems />
+            <GoodSides />
+            <YellowForm />
+            <PaymentAgentSeo />
             <Footer />
         </main>
     );

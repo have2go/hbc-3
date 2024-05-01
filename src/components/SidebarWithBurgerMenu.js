@@ -62,7 +62,7 @@ export function SidebarWithBurgerMenu() {
                             }
                         >
                             <ListItem>
-                                <Link href="#" className="">
+                                <Link href="/payment-agent" className="">
                                     Платёжный агент
                                 </Link>
                             </ListItem>

@@ -17,7 +17,7 @@ export default function About() {
                     приверженность качеству и надежности наших услуг.
                 </p>
                 <p className="leading-[120%] text-2xl font-bold SM:text-lg">Почему выбирают нас?</p>
-                <ul className="list-disc pl-10 flex flex-col gap-4 SM:text-xs SM:pl-6">
+                <ul className="list-disc pl-10 flex flex-col gap-4 SM:text-sm SM:pl-6">
                     <li>
                         <span className=" font-bold">Международное присутствие: </span>Наша география работы охватывает
                         стратегически важные рынки, включая страны Азиатско-Тихоокеанский региона, Восточной Европы и

@@ -8,7 +8,7 @@ export default function Geography() {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        setIsMobile(window.innerWidth <= 768);
+        setIsMobile(window.innerWidth <= 1023);
     }, []);
     return isMobile ? (
         <></>

@@ -27,13 +27,17 @@ export default function Footer() {
                 {!is2XL && (
                     <div className="flex py-6 justify-between">
                         <div className="flex flex-col gap-3 text-[#909090]">
-                            <p className="font-medium text-customYellow">HIGHBROW CUSTOMS</p>
+                            <Link href="/" className="font-medium text-customYellow">
+                                HIGHBROW CUSTOMS
+                            </Link>
                             <p className="text-sm">О компании</p>
                             <p className="text-sm">Реквизиты</p>
                             <p className="text-sm">FAQ</p>
                         </div>
                         <div className="flex flex-col gap-3">
-                            <p className="font-medium text-white">ПЛАТЁЖНЫЙ АГЕНТ</p>
+                            <Link href="/payment-agent" className={`font-medium text-white`}>
+                                ПЛАТЁЖНЫЙ АГЕНТ
+                            </Link>
                         </div>
                         <div className="flex flex-col gap-3 text-[#909090]">
                             <p className="font-medium text-white">ТАМОЖЕННОЕ ОФОРМЛЕНИЕ</p>
@@ -58,7 +62,7 @@ export default function Footer() {
                 {is2XL && (
                     <List className={`text-white ${montserrat.className} p-0`}>
                         <ListItem className="bg-palePurple">
-                            <Link href="#" className="">
+                            <Link href="/payment-agent" className="">
                                 Платёжный агент
                             </Link>
                         </ListItem>
@@ -188,7 +192,9 @@ export default function Footer() {
                     <p className="text-nowrap">Карта сайта</p>
                 </div>
                 <div className="bg-palePurple rounded-[20px] p-6 flex">
-                    <Image src={logo} alt="Highbrow Customs" className="w-1/3" />
+                    <Link href="/" className="flex items-center">
+                        <Image src={logo} alt="Highbrow Customs" className="w-2/3 " />
+                    </Link>
                 </div>
             </div>
         </footer>

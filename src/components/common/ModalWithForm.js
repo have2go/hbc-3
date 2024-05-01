@@ -1,6 +1,22 @@
 import { Modal, ModalContent, ModalBody } from "@nextui-org/react";
+import React, { useState} from "react";
+import { useMask } from "@react-input/mask";
+
 
 export default function ModalWithForm({ isOpen, onOpenChange, title }) {
+    const inputRef = useMask({ mask: "+7 (___) ___-__-__", replacement: { _: /\d/ }, showMask: true });
+    const [buttonText, setButtonText] = useState("Отправить");
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    const onSubmitBtn = e => {
+        e.preventDefault();
+        setButtonText("Отправка...");
+        setTimeout(() => {
+            setIsLoaded(true);
+            setButtonText("Спасибо!");
+        }, 1000);
+    };
+
     return (
         <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="md">
             <ModalContent>
@@ -8,7 +24,10 @@ export default function ModalWithForm({ isOpen, onOpenChange, title }) {
                     <>
                         {/* <ModalHeader className="flex flex-col gap-1 text-xl"></ModalHeader> */}
                         <ModalBody>
-                            <form className="flex flex-col items-center px-5 py-7 gap-6 SM:gap-4 SM:px-0">
+                            <form
+                                className="flex flex-col items-center px-5 py-7 gap-6 SM:gap-4 SM:px-0"
+                                onSubmit={onSubmitBtn}
+                            >
                                 <p className="text-xl">{title}</p>
                                 <input
                                     type="text"
@@ -23,6 +42,7 @@ export default function ModalWithForm({ isOpen, onOpenChange, title }) {
                                     placeholder="Телефон*"
                                     name="phone"
                                     required
+                                    ref={inputRef}
                                 />
                                 <input
                                     type="email"
@@ -36,8 +56,15 @@ export default function ModalWithForm({ isOpen, onOpenChange, title }) {
                                     placeholder="Сообщение"
                                 ></textarea>
                                 <div className="w-full flex">
-                                    <button className="font-medium rounded w-1/2 bg-gradient-to-r from-[#F6E960] to-[#E4D119] py-2">
-                                        Отправить
+                                    <button
+                                        type="submit"
+                                        className={`h-12 ${
+                                            isLoaded
+                                                ? "bg-[#7d7] text-white"
+                                                : "bg-gradient-to-r from-[#F6E960] to-[#E4D119]"
+                                        } px-5 max-w-72 w-full rounded font-medium`}
+                                    >
+                                        {buttonText}
                                     </button>
                                 </div>
                                 <div className="flex gap-[10px] items-center">

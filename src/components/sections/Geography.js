@@ -10,7 +10,7 @@ export default function Geography() {
     useEffect(() => {
         setIsMobile(window.innerWidth <= 1023);
     }, []);
-    return isMobile ? (
+    return !isMobile ? (
         <></>
     ) : (
         <section className=" mt-10 bg-[#BEBEBE] LG:mt-6 px-10">

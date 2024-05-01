@@ -3,10 +3,13 @@ import logo from "/public/hbc-white.svg";
 import Link from "next/link";
 import { SidebarWithBurgerMenu } from "../SidebarWithBurgerMenu";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
     const [is15XL, setIs15XL] = useState(false);
     const [isXL, setIsXL] = useState(false);
+    const pathname = usePathname();
+    console.log(pathname);
 
     useEffect(() => {
         setIs15XL(window.innerWidth <= 1400);
@@ -22,11 +25,16 @@ export default function Header() {
                         <p>—</p>
                         <button>EN</button>
                     </div>
-                    <Image src={logo} alt="Логотип Highbrow Customs" />
+                    <Link href="/">
+                        <Image src={logo} alt="Логотип Highbrow Customs" />
+                    </Link>
                     <p className="text-xs pt-4 ">Услуги для международной торговли</p>
                 </div>
                 <div className="flex text-white text-base font-bold text-nowrap 2XL:text-sm ">
-                    <Link href="#" className="px-[5px] border-r">
+                    <Link
+                        href="/payment-agent"
+                        className={`px-[5px] border-r ${pathname === "/payment-agent" ? "text-black" : "text-white"}`}
+                    >
                         Платёжный агент
                     </Link>
                     <Link href="#" className="px-[5px] border-r">
@@ -72,7 +80,9 @@ export default function Header() {
                             <p>—</p>
                             <button>EN</button>
                         </div>
-                        <Image src={logo} alt="Логотип Highbrow Customs" />
+                        <Link href="/">
+                            <Image src={logo} alt="Логотип Highbrow Customs" />
+                        </Link>
                         <p className="text-xs pt-4 XL:text-[11px]">Услуги для международной торговли</p>
                     </div>
                     <div className="flex items-center text-white text-base font-bold text-nowrap 2XL:text-sm ">
@@ -118,7 +128,9 @@ export default function Header() {
                         <p>—</p>
                         <button>EN</button>
                     </div>
-                    <Image src={logo} alt="Логотип Highbrow Customs" />
+                    <Link href="/">
+                        <Image src={logo} alt="Логотип Highbrow Customs" />
+                    </Link>
                     <p className="text-xs pt-4 XL:text-[11px] SM:text-[9px] SM:pt-2 ">
                         Услуги для международной торговли
                     </p>

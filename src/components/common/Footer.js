@@ -2,25 +2,29 @@ import React from "react";
 import Image from "next/image";
 import logo from "/public/hbc-white.svg";
 import Link from "next/link";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
 import { Montserrat } from "next/font/google";
+import { useState, useEffect } from "react";
 
 import { Typography, List, ListItem, Accordion, AccordionHeader, AccordionBody } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function Footer() {
-    const { height, width } = useWindowDimensions();
+    const [is2XL, setIs2XL] = useState(false);
     const [open, setOpen] = React.useState(0);
 
     const handleOpen = value => {
         setOpen(open === value ? 0 : value);
     };
 
+    useEffect(() => {
+        setIs2XL(window.innerWidth <= 1600);
+    }, []);
+
     return (
         <footer className="flex justify-between items-center bg-customGray py-12">
             <div className="w-full px-10 max-w-[1690px] mx-auto grid grid-cols-[1fr_440px] grid-rows-[1fr_120px] gap-y-5 gap-x-10 LG:grid-cols-1 LG:grid-rows-none MD:px-5 SM:px-3">
-                {width > 1600 && (
+                {!is2XL && (
                     <div className="flex py-6 justify-between">
                         <div className="flex flex-col gap-3 text-[#909090]">
                             <p className="font-medium text-customYellow">HIGHBROW CUSTOMS</p>
@@ -51,7 +55,7 @@ export default function Footer() {
                         </div>
                     </div>
                 )}
-                {width <= 1600 && (
+                {is2XL && (
                     <List className={`text-white ${montserrat.className} p-0`}>
                         <ListItem className="bg-palePurple">
                             <Link href="#" className="">

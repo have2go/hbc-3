@@ -1,14 +1,14 @@
 import Section from "@/components/common/Section";
 import CardGrid from "@/components/CardGrid";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
 import ServicesSlider from "../ServicesSlider";
+import { useState, useEffect } from "react";
 
 export default function Services() {
-    const { height, width } = useWindowDimensions();
+    const [isXL, setIsXL] = useState(false);
 
-    return (
-        <Section title={"Услуги"}>
-            {width > 1280 ? <CardGrid /> : <ServicesSlider />}
-        </Section>
-    );
+    useEffect(() => {
+        setIsXL(window.innerWidth > 1280);
+    }, []);
+
+    return <Section title={"Услуги"}>{isXL ? <CardGrid /> : <ServicesSlider />}</Section>;
 }

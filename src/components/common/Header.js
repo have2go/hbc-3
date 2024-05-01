@@ -1,13 +1,19 @@
 import Image from "next/image";
 import logo from "/public/hbc-white.svg";
 import Link from "next/link";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
 import { SidebarWithBurgerMenu } from "../SidebarWithBurgerMenu";
+import { useState, useEffect } from "react";
 
 export default function Header() {
-    const { height, width } = useWindowDimensions();
+    const [is15XL, setIs15XL] = useState(false);
+    const [isXL, setIsXL] = useState(false);
 
-    if (width > 1400) {
+    useEffect(() => {
+        setIs15XL(window.innerWidth <= 1400);
+        setIsXL(window.innerWidth <= 1200);
+    }, []);
+
+    if (!is15XL) {
         return (
             <header className="flex justify-between items-center gap-3">
                 <div className="flex flex-col w-64 text-white">
@@ -56,7 +62,7 @@ export default function Header() {
         );
     }
 
-    if (width <= 1400 && width > 1200) {
+    if (is15XL && !isXL) {
         return (
             <header className="flex flex-col">
                 <div className="flex justify-between">
@@ -103,7 +109,7 @@ export default function Header() {
         );
     }
 
-    if (width <= 1200) {
+    if (isXL) {
         return (
             <header className="flex justify-between items-center">
                 <div className="flex flex-col w-64 XL:w-56 SM:w-[200px] text-white">
@@ -113,7 +119,9 @@ export default function Header() {
                         <button>EN</button>
                     </div>
                     <Image src={logo} alt="Логотип Highbrow Customs" />
-                    <p className="text-xs pt-4 XL:text-[11px] SM:text-[9px] SM:pt-2 ">Услуги для международной торговли</p>
+                    <p className="text-xs pt-4 XL:text-[11px] SM:text-[9px] SM:pt-2 ">
+                        Услуги для международной торговли
+                    </p>
                 </div>
                 <SidebarWithBurgerMenu />
             </header>

@@ -12,10 +12,14 @@ import InternationalServices from "@/components/sections/InternationalServices";
 import Footer from "@/components/common/Footer";
 import Geography from "@/components/sections/Geography";
 
-import useWindowDimensions from "@/hooks/useWindowDimensions";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-    const { height, width } = useWindowDimensions();
+    const [isMobile, setIsMobile] = useState(false); //the initial state depends on mobile-first or desktop-first strategy
+
+    useEffect(() => {
+        setIsMobile(window.innerWidth >= 767.98);
+    },[]);
 
     return (
         <main className="relative text-customGray">
@@ -27,7 +31,7 @@ export default function Home() {
             <Main />
             <Services />
             <About />
-            {width > 768 && <Geography />}
+            {isMobile && <Geography />}
             <Form />
             <Reviews />
             <InternationalServices />

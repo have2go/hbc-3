@@ -1,5 +1,3 @@
-import Section from "@/components/common/Section";
-
 export default function InternationalServices() {
     return (
         <section className="pt-20 px-10 w-full max-w-[1690px] mx-auto LG:pt-10 MD:px-5 SM:px-3 SM:pt-5">

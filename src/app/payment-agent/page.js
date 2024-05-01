@@ -6,6 +6,7 @@ import mainBg from "/public/main-bg.jpg";
 import About from "@/components/sections/About";
 import Main from "@/components/sections/Main";
 import PaymentAgent from "./components/PaymentAgent";
+import HowItWorks from "./components/HowItWorks";
 import Services from "@/components/sections/Services";
 import Form from "@/components/sections/Form";
 import Reviews from "@/components/sections/Reviews";
@@ -15,7 +16,6 @@ import Geography from "@/components/sections/Geography";
 
 
 export default function Home() {
-
     return (
         <main className="relative text-customGray">
             <Image
@@ -25,6 +25,7 @@ export default function Home() {
             />
             <Main />
             <PaymentAgent />
+            <HowItWorks />
             {/* <Services />
             <About />
             <Geography />

@@ -1,8 +1,8 @@
 import Section from "@/components/common/Section";
 
-export default function PaymentAgent() {
+export default function HowItWorks() {
     return (
-        <Section title={"Платёжный агент"}>
+        <Section title={"Как это работает?"}>
             <div className="flex flex-col gap-3 SM:text-sm">
                 <p className="leading-[120%]">
                     Сегодня многие бизнес в России сталкиваются с трудностями при осуществлении международных платежей.

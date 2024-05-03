@@ -61,11 +61,9 @@ export function SidebarWithBurgerMenu() {
                                 />
                             }
                         >
-                            <ListItem>
-                                <Link href="/payment-agent" className="">
-                                    Платёжный агент
-                                </Link>
-                            </ListItem>
+                            <Link href="/payment-agent" className="">
+                                <ListItem>Платёжный агент</ListItem>
+                            </Link>
                             <ListItem className="p-0" selected={open === 1}>
                                 <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3">
                                     <Typography

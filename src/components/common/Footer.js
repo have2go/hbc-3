@@ -52,11 +52,9 @@ export default function Footer() {
                     </div>
                 </div>
                 <List className={`text-white ${montserrat.className} p-0 2xl:hidden`}>
-                    <ListItem className="bg-palePurple">
-                        <Link href="/payment-agent" className="">
-                            Платёжный агент
-                        </Link>
-                    </ListItem>
+                    <Link href="/payment-agent" className="">
+                        <ListItem className="bg-palePurple">Платёжный агент</ListItem>
+                    </Link>
                     <Accordion
                         open={open === 1}
                         icon={

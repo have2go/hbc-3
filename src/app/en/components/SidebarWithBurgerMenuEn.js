@@ -17,7 +17,7 @@ import logo from "/public/hbc-black.svg";
 import { Montserrat } from "next/font/google";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
-export function SidebarWithBurgerMenu() {
+export function SidebarWithBurgerMenuEn() {
     const [open, setOpen] = React.useState(0);
     const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
 
@@ -62,7 +62,7 @@ export function SidebarWithBurgerMenu() {
                             }
                         >
                             <Link href="/payment-agent" className="">
-                                <ListItem>Платёжный агент</ListItem>
+                                <ListItem>Payment agent</ListItem>
                             </Link>
                             <ListItem className="p-0" selected={open === 1}>
                                 <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3">
@@ -70,7 +70,7 @@ export function SidebarWithBurgerMenu() {
                                         color="blue-gray"
                                         className={` ${montserrat.className} mr-auto font-normal`}
                                     >
-                                        Таможенное оформление
+                                        Сustoms clearance
                                     </Typography>
                                 </AccordionHeader>
                             </ListItem>
@@ -78,35 +78,35 @@ export function SidebarWithBurgerMenu() {
                                 <List className="p-0">
                                     <ListItem>
                                         <Link href="#" className={`${montserrat.className}`}>
-                                            Экспорт
+                                            Import
                                         </Link>
                                     </ListItem>
 
                                     <ListItem>
                                         <Link href="#" className={`${montserrat.className}`}>
-                                            Импорт
+                                            Export
                                         </Link>
                                     </ListItem>
                                     <ListItem>
                                         <Link href="#" className={`${montserrat.className}`}>
-                                            Транзит
+                                            Transit
                                         </Link>
                                     </ListItem>
                                     <ListItem>
                                         <Link href="#" className={`${montserrat.className}`}>
-                                            Поручительство
+                                            Guarantee
                                         </Link>
                                     </ListItem>
                                 </List>
                             </AccordionBody>
                             <ListItem>
                                 <Link href="#" className="">
-                                    Акцизные товары
+                                    Excise
                                 </Link>
                             </ListItem>
                             <ListItem>
                                 <Link href="#" className="">
-                                    Логистика
+                                    Logistics
                                 </Link>
                             </ListItem>
                         </Accordion>
@@ -114,12 +114,12 @@ export function SidebarWithBurgerMenu() {
                         <hr className="my-2 border-blue-gray-50" />
                         <ListItem>
                             <Link href="#" className="">
-                                О нас
+                                About Us
                             </Link>
                         </ListItem>
                         <ListItem>
                             <Link href="#" className="">
-                                Контакты
+                                Contacts
                             </Link>
                         </ListItem>
                     </List>

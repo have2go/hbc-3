@@ -16,7 +16,7 @@ export default function Main() {
                 <div className="flex flex-col justify-between h-4/5">
                     <Header />
                     <h1
-                        className={`text-white text-[40px] leading-tight ${openSans.className} font-bold XL:text-4xl LG:text-3xl SM:text-2xl`}
+                        className={`text-white text-[40px] leading-tight ${openSans.className} font-bold 2XL:text-4xl LG:text-3xl SM:text-2xl`}
                     >
                         Превращаем{<br />}глобальные вызовы в{<br />}возможности — ваш{<br />}партнер в области{<br />}
                         внешнеэкономической{<br />}деятельности

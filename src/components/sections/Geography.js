@@ -17,7 +17,8 @@ export default function Geography() {
                     </div>
                 </div>
             </section>
-            {typeof window !== "undefined" && window.innerWidth <= 768 ? <YandexMap /> : <></>}
+            {/* {typeof window !== "undefined" && window.innerWidth <= 768 ? <YandexMap /> : <></>} */}
+            <YandexMap />
         </>
     );
 }

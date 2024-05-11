@@ -12,9 +12,7 @@ import InternationalServices from "@/components/sections/InternationalServices";
 import Footer from "@/components/common/Footer";
 import Geography from "@/components/sections/Geography";
 
-
 export default function Home() {
-
     return (
         <main className="relative text-customGray">
             <Image
@@ -26,7 +24,10 @@ export default function Home() {
             <Services />
             <About />
             <Geography />
-            <Form />
+            <Form
+                title="Оставить заявку"
+                subtitle="Заполните форму, и мы свяжемся с вами для предоставления детальной информации и персональных рекомендаций."
+            />
             <Reviews />
             <InternationalServices />
             <Footer />

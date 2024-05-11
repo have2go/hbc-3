@@ -1,7 +1,7 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { useMask } from "@react-input/mask";
 
-export default function Form() {
+export default function Form({ title, subtitle }) {
     const inputRef = useMask({ mask: "+7 (___) ___-__-__", replacement: { _: /\d/ }, showMask: true });
     const [buttonText, setButtonText] = useState("Отправить");
     const [isLoaded, setIsLoaded] = useState(false);
@@ -21,10 +21,9 @@ export default function Form() {
                 className="p-[30px] max-w-[1400px] w-full mx-auto border-2 border-customYellow rounded-[20px] MD:p-5 SM:px-3"
                 onSubmit={onSubmitBtn}
             >
-                <h2 className="text-4xl LG:text-3xl SM:text-2xl">Оставить заявку</h2>
+                <h2 className="text-4xl LG:text-3xl SM:text-2xl">{title}</h2>
                 <p className="mt-5 mb-10 text-[#5E5E62] LG:text-sm MD:mt-4 MD:mb-6 MD:text-xs SM:mt-2 SM:mb-4 SM:text-[11px]">
-                    Заполните форму, и мы свяжемся с вами для предоставления детальной информации и персональных
-                    рекомендаций.
+                    {subtitle}
                 </p>
                 <div className="grid grid-cols-3 gap-6 MD:gap-3 SM:grid-cols-1">
                     <input

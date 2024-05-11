@@ -2,7 +2,7 @@ import { Modal, ModalContent, ModalBody } from "@nextui-org/react";
 import React, { useState } from "react";
 // import { useMask } from "@react-input/mask";
 
-export default function ModalWithForm({ isOpen, onOpenChange, title }) {
+export default function ModalWithFormEn({ isOpen, onOpenChange, title }) {
     // const inputRef = useMask({ mask: "+7 (___) ___-__-__", replacement: { _: /\d/ }, showMask: true });
     const [buttonText, setButtonText] = useState("Send");
     const [isLoaded, setIsLoaded] = useState(false);

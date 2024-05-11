@@ -18,40 +18,40 @@ export default function HeaderEn() {
                             EN
                         </Link>
                     </div>
-                    <Link href="/">
+                    <Link href="/en">
                         <Image src={logo} alt="Логотип Highbrow Customs" />
                     </Link>
                     <p className="text-xs pt-4 ">Customs & Distribution services for Russia</p>
                 </div>
                 <div className="flex text-white text-base font-bold text-nowrap 2XL:text-sm ">
                     <Link
-                        href="/payment-agent"
+                        href="/en/payment-agent"
                         className={`px-[5px] border-r ${pathname === "/payment-agent" ? "text-black" : "text-white"}`}
                     >
                         Payment agent
                     </Link>
-                    <Link href="#" className="px-[5px] border-r">
+                    <Link href="/en/in-development" className="px-[5px] border-r">
                         Import
                     </Link>
-                    <Link href="#" className="px-[5px] border-r">
+                    <Link href="/en/in-development" className="px-[5px] border-r">
                         Export
                     </Link>
-                    <Link href="#" className="px-[5px] border-r">
+                    <Link href="/en/in-development" className="px-[5px] border-r">
                         Transit
                     </Link>
-                    <Link href="#" className="px-[5px] border-r">
+                    <Link href="/en/in-development" className="px-[5px] border-r">
                         Excise goods
                     </Link>
-                    <Link href="#" className="px-[5px] border-r">
+                    <Link href="/en/in-development" className="px-[5px] border-r">
                         Customs Guarantees
                     </Link>
-                    <Link href="#" className="px-[5px] border-r">
+                    <Link href="/en/in-development" className="px-[5px] border-r">
                         Logistics
                     </Link>
-                    <Link href="#" className="px-[5px] border-r">
+                    <Link href="/en/in-development" className="px-[5px] border-r">
                         About US
                     </Link>
-                    <Link href="#" className="px-[5px]">
+                    <Link href="/en/in-development" className="px-[5px]">
                         Contacts
                     </Link>
                 </div>
@@ -76,31 +76,31 @@ export default function HeaderEn() {
                         <p className="text-xs pt-4 XL:text-[11px]">Услуги для международной торговли</p>
                     </div>
                     <div className="flex items-center text-white text-base font-bold text-nowrap 2XL:text-sm ">
-                        <Link href="/payment-agent" className="px-[5px] XL:px-[3px] border-r">
+                        <Link href="/en/payment-agent" className="px-[5px] XL:px-[3px] border-r">
                             Payment agent
                         </Link>
-                        <Link href="#" className="px-[5px] XL:px-[3px] border-r">
+                        <Link href="/en/in-development" className="px-[5px] XL:px-[3px] border-r">
                             Import
                         </Link>
-                        <Link href="#" className="px-[5px] XL:px-[3px] border-r">
+                        <Link href="/en/in-development" className="px-[5px] XL:px-[3px] border-r">
                             Export
                         </Link>
-                        <Link href="#" className="px-[5px] XL:px-[3px] border-r">
+                        <Link href="/en/in-development" className="px-[5px] XL:px-[3px] border-r">
                             Transit
                         </Link>
-                        <Link href="#" className="px-[5px] XL:px-[3px] border-r">
+                        <Link href="/en/in-development" className="px-[5px] XL:px-[3px] border-r">
                             Excise goods
                         </Link>
-                        <Link href="#" className="px-[5px] XL:px-[3px] border-r">
+                        <Link href="/en/in-development" className="px-[5px] XL:px-[3px] border-r">
                             Customs Guarantees
                         </Link>
-                        <Link href="#" className="px-[5px] XL:px-[3px] border-r">
+                        <Link href="/en/in-development" className="px-[5px] XL:px-[3px] border-r">
                             Logistics
                         </Link>
-                        <Link href="#" className="px-[5px] XL:px-[3px] border-r">
+                        <Link href="/en/in-development" className="px-[5px] XL:px-[3px] border-r">
                             About US
                         </Link>
-                        <Link href="#" className="pl-[5px] XL:px-[3px]">
+                        <Link href="/en/in-development" className="pl-[5px] XL:px-[3px]">
                             Contacts
                         </Link>
                     </div>
@@ -115,7 +115,7 @@ export default function HeaderEn() {
                             EN
                         </Link>
                     </div>
-                    <Link href="/">
+                    <Link href="/en">
                         <Image src={logo} alt="Логотип Highbrow Customs" />
                     </Link>
                     <p className="text-xs pt-4 XL:text-[11px] SM:text-[9px] SM:pt-2 ">

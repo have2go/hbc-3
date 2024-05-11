@@ -23,9 +23,9 @@ export default function Footer() {
                         <Link href="/" className="font-medium text-customYellow">
                             HIGHBROW CUSTOMS
                         </Link>
-                        <p className="text-sm">О компании</p>
-                        <p className="text-sm">Реквизиты</p>
-                        <p className="text-sm">FAQ</p>
+                        <Link href='/in-development' className="text-sm">О компании</Link>
+                        <Link href='/in-development' className="text-sm">Реквизиты</Link>
+                        <Link href='/in-development' className="text-sm">FAQ</Link>
                     </div>
                     <div className="flex flex-col gap-3">
                         <Link href="/payment-agent" className={`font-medium text-white`}>
@@ -34,21 +34,21 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-3 text-[#909090]">
                         <p className="font-medium text-white">ТАМОЖЕННОЕ ОФОРМЛЕНИЕ</p>
-                        <p className="text-sm">Импорт</p>
-                        <p className="text-sm">Экспорт</p>
-                        <p className="text-sm">Транзит</p>
-                        <p className="text-sm">Поручительство</p>
+                        <Link href='/in-development' className="text-sm">Импорт</Link>
+                        <Link href='/in-development' className="text-sm">Экспорт</Link>
+                        <Link href='/in-development' className="text-sm">Транзит</Link>
+                        <Link href='/in-development' className="text-sm">Поручительство</Link>
                     </div>
                     <div className="flex flex-col gap-3">
-                        <p className="font-medium text-white">АКЦИЗНЫЕ ТОВАРЫ</p>
+                        <Link href='/in-development' className="font-medium text-white">АКЦИЗНЫЕ ТОВАРЫ</Link>
                     </div>
                     <div className="flex flex-col gap-3 text-[#909090]">
-                        <p className="font-medium text-white">ЛОГИСТИКА</p>
-                        <p className="text-sm">Контейнерные перевозки</p>
-                        <p className="text-sm">Автоперевозки</p>
-                        <p className="text-sm">Морские перевозки</p>
-                        <p className="text-sm">Авиаперевозки</p>
-                        <p className="text-sm">Ж/Д перевозки</p>
+                        <Link href='/in-development' className="font-medium text-white">ЛОГИСТИКА</Link>
+                        <Link href='/in-development' className="text-sm">Контейнерные перевозки</Link>
+                        <Link href='/in-development' className="text-sm">Автоперевозки</Link>
+                        <Link href='/in-development' className="text-sm">Морские перевозки</Link>
+                        <Link href='/in-development' className="text-sm">Авиаперевозки</Link>
+                        <Link href='/in-development' className="text-sm">Ж/Д перевозки</Link>
                     </div>
                 </div>
                 <List className={`text-white ${montserrat.className} p-0 2xl:hidden`}>
@@ -82,23 +82,23 @@ export default function Footer() {
                         <AccordionBody className="py-1">
                             <List className={`text-white ${montserrat.className} p-0`}>
                                 <ListItem>
-                                    <Link href="#" className="px-[5px]  ">
+                                    <Link href="/in-development" className="px-[5px]  ">
                                         Экспорт
                                     </Link>
                                 </ListItem>
 
                                 <ListItem>
-                                    <Link href="#" className="px-[5px] XL:px-[3px]  ">
+                                    <Link href="/in-development" className="px-[5px] XL:px-[3px]  ">
                                         Импорт
                                     </Link>
                                 </ListItem>
                                 <ListItem>
-                                    <Link href="#" className="px-[5px] XL:px-[3px]  ">
+                                    <Link href="/in-development" className="px-[5px] XL:px-[3px]  ">
                                         Транзит
                                     </Link>
                                 </ListItem>
                                 <ListItem>
-                                    <Link href="#" className="px-[5px] XL:px-[3px]  ">
+                                    <Link href="/in-development" className="px-[5px] XL:px-[3px]  ">
                                         Поручительство
                                     </Link>
                                 </ListItem>
@@ -132,28 +132,28 @@ export default function Footer() {
                         <AccordionBody className="py-1">
                             <List className={`text-white ${montserrat.className} p-0`}>
                                 <ListItem>
-                                    <Link href="#" className="px-[5px]  ">
+                                    <Link href="/in-development" className="px-[5px]  ">
                                         Контейнерные перевозки
                                     </Link>
                                 </ListItem>
 
                                 <ListItem>
-                                    <Link href="#" className="px-[5px] XL:px-[3px]  ">
+                                    <Link href="/in-development" className="px-[5px] XL:px-[3px]  ">
                                         Автоперевозки
                                     </Link>
                                 </ListItem>
                                 <ListItem>
-                                    <Link href="#" className="px-[5px] XL:px-[3px]  ">
+                                    <Link href="/in-development" className="px-[5px] XL:px-[3px]  ">
                                         Морские перевозки
                                     </Link>
                                 </ListItem>
                                 <ListItem>
-                                    <Link href="#" className="px-[5px] XL:px-[3px]  ">
+                                    <Link href="/in-development" className="px-[5px] XL:px-[3px]  ">
                                         Авиаперевозки
                                     </Link>
                                 </ListItem>
                                 <ListItem>
-                                    <Link href="#" className="px-[5px] XL:px-[3px]  ">
+                                    <Link href="/in-development" className="px-[5px] XL:px-[3px]  ">
                                         Ж/Д перевозки
                                     </Link>
                                 </ListItem>

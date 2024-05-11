@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-import mainBg from "/public/main-bg.jpg";
+import mainBg from "/public/main-bg-eng.jpg";
 import MainEn from "./components/sections/MainEn";
 import ServicesEn from "./components/sections/ServicesEn";
 import AboutEn from "./components/sections/AboutEn";

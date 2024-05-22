@@ -55,7 +55,7 @@ export default function HeaderEn() {
                         Contacts
                     </Link>
                 </div>
-                <div className="flex flex-col text-right text-base font-medium text-nowrap 2XL:text-xs ">
+                <div className="flex flex-col text-right text-base font-medium text-nowrap 2XL:text-xs text-white">
                     <p className="">zayavka@hb-customs.ru</p>
                     <p className="">+7(812) 600-48-49 (EXT. 209)</p>
                 </div>

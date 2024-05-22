@@ -23,23 +23,20 @@ import {
     indonesia,
 } from "@/constants/svgPaths";
 import Tooltip from "./Tooltip";
+import ModalWithFormMap from "./common/ModalWithFormMap";
+import { useDisclosure } from "@nextui-org/react";
 import { useState } from "react";
 
 export default function SvgMap() {
     const [tooltipData, setTooltipData] = useState({ countryName: "", position: null });
-    // let tooltipTimer;
 
-    // const handleMouseOver = (event, countryName) => {
-    //   clearTimeout(tooltipTimer);
-    //   tooltipTimer = setTimeout(() => {
-    //     setTooltipData({ countryName, position: { x: event.clientX, y: event.clientY } });
-    //   }, 2); // Задержка в 200 миллисекунд
-    // };
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    const [formTitle, setFormTitle] = useState("Связаться с представительством в России");
 
-    // const handleMouseOut = () => {
-    //   clearTimeout(tooltipTimer);
-    //   setTooltipData({ countryName: "", position: null });
-    // };
+    const onOpenModal = country => {
+        setFormTitle(`Связаться с представительством в ${country}`);
+        onOpen();
+    };
 
     const handleMouseOver = (event, countryName) => {
         setTooltipData({ countryName, position: { x: event.clientX + 10, y: event.clientY + 10 } });
@@ -50,6 +47,7 @@ export default function SvgMap() {
     };
     return (
         <div className="">
+            <ModalWithFormMap isOpen={isOpen} onOpenChange={onOpenChange} title={formTitle} />
             <svg viewBox="0 0 2480 1468" className="absolute top-0 left-0 h-auto">
                 <path
                     className="country"
@@ -57,6 +55,7 @@ export default function SvgMap() {
                     data-name="Россия"
                     onMouseOver={event => handleMouseOver(event, "Россия")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("России")}
                 ></path>
                 <path
                     className="country"
@@ -64,6 +63,7 @@ export default function SvgMap() {
                     data-name="Белоруссия"
                     onMouseOver={event => handleMouseOver(event, "Белоруссия")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Белоруссии")}
                 ></path>
                 <path
                     className="country"
@@ -71,6 +71,7 @@ export default function SvgMap() {
                     data-name="Германия"
                     onMouseOver={event => handleMouseOver(event, "Германия")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Германии")}
                 ></path>
                 <path
                     className="country"
@@ -78,6 +79,7 @@ export default function SvgMap() {
                     data-name="Сербия"
                     onMouseOver={event => handleMouseOver(event, "Сербия")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Сербии")}
                 ></path>
                 <path
                     className="country"
@@ -85,6 +87,7 @@ export default function SvgMap() {
                     data-name="Марокко"
                     onMouseOver={event => handleMouseOver(event, "Марокко")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Марокко")}
                 ></path>
                 <path
                     className="country"
@@ -92,6 +95,7 @@ export default function SvgMap() {
                     data-name="Сенегал"
                     onMouseOver={event => handleMouseOver(event, "Сенегал")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Сенегале")}
                 ></path>
                 <path
                     className="country"
@@ -99,6 +103,7 @@ export default function SvgMap() {
                     data-name="Нигерия"
                     onMouseOver={event => handleMouseOver(event, "Нигерия")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Нигерии")}
                 ></path>
                 <path
                     className="country"
@@ -106,6 +111,7 @@ export default function SvgMap() {
                     data-name="Камерун"
                     onMouseOver={event => handleMouseOver(event, "Камерун")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Камеруне")}
                 ></path>
                 <path
                     className="country"
@@ -113,6 +119,7 @@ export default function SvgMap() {
                     data-name="ДР Конго"
                     onMouseOver={event => handleMouseOver(event, "ДР Конго")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("ДР Конго")}
                 ></path>
                 <path
                     className="country"
@@ -120,6 +127,7 @@ export default function SvgMap() {
                     data-name="Турция"
                     onMouseOver={event => handleMouseOver(event, "Турция")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Турции")}
                 ></path>
                 <path
                     className="country"
@@ -127,6 +135,7 @@ export default function SvgMap() {
                     data-name="Азербайджан"
                     onMouseOver={event => handleMouseOver(event, "Азербайджан")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Азербайджане")}
                 ></path>
                 <path
                     className="country"
@@ -134,6 +143,7 @@ export default function SvgMap() {
                     data-name="ОАЭ"
                     onMouseOver={event => handleMouseOver(event, "ОАЭ")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("ОАЭ")}
                 ></path>
                 <path
                     className="country"
@@ -141,6 +151,7 @@ export default function SvgMap() {
                     data-name="Казахстан"
                     onMouseOver={event => handleMouseOver(event, "Казахстан")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Казахстане")}
                 ></path>
                 <path
                     className="country"
@@ -148,6 +159,7 @@ export default function SvgMap() {
                     data-name="Монголия"
                     onMouseOver={event => handleMouseOver(event, "Монголия")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Монголии")}
                 ></path>
                 <path
                     className="country"
@@ -155,6 +167,7 @@ export default function SvgMap() {
                     data-name="Узбекистан"
                     onMouseOver={event => handleMouseOver(event, "Узбекистан")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Узбекистане")}
                 ></path>
                 <path
                     className="country"
@@ -162,6 +175,7 @@ export default function SvgMap() {
                     data-name="Кыргызстан"
                     onMouseOver={event => handleMouseOver(event, "Кыргызстан")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Кыргызстане")}
                 ></path>
                 <path
                     className="country"
@@ -169,6 +183,7 @@ export default function SvgMap() {
                     data-name="Китай"
                     onMouseOver={event => handleMouseOver(event, "Китай")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Китае")}
                 ></path>
                 <path
                     className="country"
@@ -176,6 +191,7 @@ export default function SvgMap() {
                     data-name="Индия"
                     onMouseOver={event => handleMouseOver(event, "Индия")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Индии")}
                 ></path>
                 <path
                     className="country"
@@ -183,6 +199,7 @@ export default function SvgMap() {
                     data-name="Шри-Ланка"
                     onMouseOver={event => handleMouseOver(event, "Шри-Ланка")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Шри-Ланке")}
                 ></path>
                 <path
                     className="country"
@@ -190,6 +207,7 @@ export default function SvgMap() {
                     data-name="Малайзия"
                     onMouseOver={event => handleMouseOver(event, "Малайзия")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Малайзии")}
                 ></path>
                 <path
                     className="country"
@@ -197,6 +215,7 @@ export default function SvgMap() {
                     data-name="Папуа-Новая Гвинея"
                     onMouseOver={event => handleMouseOver(event, "Папуа-Новая Гвинея")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Папуа-Новой Гвинее")}
                 ></path>
                 <path
                     className="country"
@@ -204,6 +223,7 @@ export default function SvgMap() {
                     data-name="Индонезия"
                     onMouseOver={event => handleMouseOver(event, "Индонезия")}
                     onMouseOut={handleMouseOut}
+                    onClick={() => onOpenModal("Индонезии")}
                 ></path>
             </svg>
             <Tooltip countryName={tooltipData.countryName} position={tooltipData.position} />

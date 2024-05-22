@@ -1,4 +1,8 @@
+import ModalWithFormEn from "../common/ModalWithFormEn";
+import { useDisclosure } from "@nextui-org/react";
+
 export default function InternationalServicesEn() {
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
     return (
         <section className="pt-20 px-10 w-full max-w-[1690px] mx-auto LG:pt-10 MD:px-5 SM:px-3 SM:pt-5">
             <h2 className="text-4xl mb-10 LG:mb-5 LG:text-3xl SM:text-xl">
@@ -50,10 +54,14 @@ export default function InternationalServicesEn() {
                     {<br />}
                     {<br />}
                     Successfully navigating international trade in Russia requires a competent and reliable partner.
-                    Highbrow Customs is committed to being your indispensable ally in the global economy. Contact us
+                    Highbrow Customs is committed to being your indispensable ally in the global economy.{" "}
+                    <span className="text-customPurple font-bold cursor-pointer" onClick={onOpen}>
+                        Contact us
+                    </span>{" "}
                     today to find out how we can help your business in Russia.
                 </p>
             </div>
+            <ModalWithFormEn isOpen={isOpen} onOpenChange={onOpenChange} title="Get a free consultation" />
         </section>
     );
 }

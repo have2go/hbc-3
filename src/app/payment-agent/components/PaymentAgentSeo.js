@@ -1,6 +1,9 @@
 import Section from "@/components/common/Section";
+import ModalWithForm from "@/components/common/ModalWithForm";
+import { useDisclosure } from "@nextui-org/react";
 
 export default function PaymentAgentSeo() {
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
     return (
         <Section title={"Платёжный агент"}>
             <div className="flex flex-col text-paleGray text-sm">
@@ -48,12 +51,17 @@ export default function PaymentAgentSeo() {
                     {<br />}
                     Если вы ищете надежного и опытного платежного агента, который поможет вашему бизнесу процветать на
                     международной арене, не стесняйтесь обращаться к нам.{" "}
-                    <span className="text-customPurple font-bold">Оставьте заявку</span> прямо сейчас, чтобы получить
-                    персонализированное предложение, или{" "}
-                    <span className="text-customPurple font-bold">cвяжитесь с нами</span> для дополнительной информации
-                    о наших услугах.
+                    <span className="text-customPurple font-bold cursor-pointer" onClick={onOpen}>
+                        Оставьте заявку
+                    </span>{" "}
+                    прямо сейчас, чтобы получить персонализированное предложение, или{" "}
+                    <span className="text-customPurple font-bold cursor-pointer" onClick={onOpen}>
+                        cвяжитесь с нами
+                    </span>{" "}
+                    для дополнительной информации о наших услугах.
                 </p>
             </div>
+            <ModalWithForm isOpen={isOpen} onOpenChange={onOpenChange} title={"Оставить заявку"} />
         </Section>
     );
 }

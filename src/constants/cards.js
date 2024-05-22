@@ -18,6 +18,7 @@ export const cardsS = [
                 {<br />}Гарантия безопасности, скорости и юридической чистоты всех транзакций.
             </p>
         ),
+        linkTo: "/payment-agent",
     },
     {
         img: imp,
@@ -28,6 +29,7 @@ export const cardsS = [
                 свободную реализацию в рамках соблюдения всех регуляторных требований.
             </p>
         ),
+        linkTo: "/in-development",
     },
     {
         img: exp,
@@ -39,6 +41,7 @@ export const cardsS = [
                 стандартов и требований.
             </p>
         ),
+        linkTo: "/in-development",
     },
     {
         img: transit,
@@ -49,6 +52,7 @@ export const cardsS = [
                 процедуры и соблюдаем все регуляторные требования для эффективного и надёжного транзита вашей продукции.
             </p>
         ),
+        linkTo: "/in-development",
     },
     {
         img: acise,
@@ -60,6 +64,7 @@ export const cardsS = [
                 территории ЕАЭС.
             </p>
         ),
+        linkTo: "/in-development",
     },
     {
         img: guarantees,
@@ -71,6 +76,7 @@ export const cardsS = [
                 товаров, снизив при этом финансовые риски.
             </p>
         ),
+        linkTo: "/in-development",
     },
     {
         img: logistics,
@@ -82,5 +88,6 @@ export const cardsS = [
                 обеспечение их безопасности на всех этапах транспортировки.
             </p>
         ),
+        linkTo: "/in-development",
     },
 ];

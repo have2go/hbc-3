@@ -18,6 +18,7 @@ export const cardsEn = [
                 transactions, ensuring that your funds are handled with the utmost care and compliance.
             </p>
         ),
+        linkTo: "/en/payment-agent",
     },
     {
         img: imp,
@@ -29,6 +30,7 @@ export const cardsEn = [
                 regulatory challenges efficiently.
             </p>
         ),
+        linkTo: "/en/in-development",
     },
     {
         img: exp,
@@ -40,6 +42,7 @@ export const cardsEn = [
                 documentation and resolve any procedural hurdles quickly.
             </p>
         ),
+        linkTo: "/en/in-development",
     },
     {
         img: transit,
@@ -51,6 +54,7 @@ export const cardsEn = [
                 smooth passage for your goods.
             </p>
         ),
+        linkTo: "/en/in-development",
     },
     {
         img: acise,
@@ -62,6 +66,7 @@ export const cardsEn = [
                 duties, and coordinating with customs to ensure compliance with Russian regulations.
             </p>
         ),
+        linkTo: "/en/in-development",
     },
     {
         img: guarantees,
@@ -73,6 +78,7 @@ export const cardsEn = [
                 companies, ensuring that all duties and taxes are secured and regulatory compliance is met.
             </p>
         ),
+        linkTo: "/en/in-development",
     },
     {
         img: logistics,
@@ -84,5 +90,6 @@ export const cardsEn = [
                 ensure their security at all stages of transportation.
             </p>
         ),
+        linkTo: "/en/in-development",
     },
 ];

@@ -11,10 +11,10 @@ const openSans = Open_Sans({ subsets: ["latin"] });
 const stickNoBills = Stick_No_Bills({ subsets: ["latin"] });
 
 export default function inDevelopment() {
-    const daysLeft = Math.floor((1716486898557 - Date.now()) / 86400000);
-    const hoursAndMinutes = 1716486898557 - (Date.now() + 86400000 * daysLeft);
+    const daysLeft = Math.floor((1717486898557 - Date.now()) / 86400000);
+    const hoursAndMinutes = 1717486898557 - (Date.now() + 86400000 * daysLeft);
     const hoursLeft = Math.floor(hoursAndMinutes / 3600000);
-    const minutes = 1716486898557 - (Date.now() + 86400000 * daysLeft + 3600000 * hoursLeft);
+    const minutes = 1717486898557 - (Date.now() + 86400000 * daysLeft + 3600000 * hoursLeft);
     const minutesLeft = Math.floor(minutes / 60000);
 
     return (

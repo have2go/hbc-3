@@ -53,7 +53,7 @@ export default function Header() {
                     <Link href="/in-development" className="px-[5px] border-r">
                         О нас
                     </Link>
-                    <Link href="/in-development" className="px-[5px]">
+                    <Link href="/contacts" className="px-[5px]">
                         Контакты
                     </Link>
                 </div>
@@ -104,7 +104,7 @@ export default function Header() {
                         <Link href="/in-development" className="px-[5px] XL:px-[3px] border-r">
                             О нас
                         </Link>
-                        <Link href="/in-development" className="pl-[5px] XL:px-[3px]">
+                        <Link href="/contacts" className="pl-[5px] XL:px-[3px]">
                             Контакты
                         </Link>
                     </div>

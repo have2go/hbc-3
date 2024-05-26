@@ -117,11 +117,10 @@ export function SidebarWithBurgerMenu() {
                                 О нас
                             </Link>
                         </ListItem>
-                        <ListItem>
-                            <Link href="/in-development" className="">
-                                Контакты
-                            </Link>
-                        </ListItem>
+
+                        <Link href="/contacts" className="">
+                            <ListItem>Контакты</ListItem>
+                        </Link>
                     </List>
                     <div className="mx-auto text-center pt-10">
                         <p className="">+7(812) 600-48-49 (доб. 209)</p>

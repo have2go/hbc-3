@@ -51,7 +51,7 @@ export default function HeaderEn() {
                     <Link href="/en/in-development" className="px-[5px] border-r">
                         About US
                     </Link>
-                    <Link href="/en/in-development" className="px-[5px]">
+                    <Link href="/en/contacts" className="px-[5px]">
                         Contacts
                     </Link>
                 </div>
@@ -100,7 +100,7 @@ export default function HeaderEn() {
                         <Link href="/en/in-development" className="px-[5px] XL:px-[3px] border-r">
                             About US
                         </Link>
-                        <Link href="/en/in-development" className="pl-[5px] XL:px-[3px]">
+                        <Link href="/en/contacts" className="pl-[5px] XL:px-[3px]">
                             Contacts
                         </Link>
                     </div>

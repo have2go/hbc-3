@@ -1,4 +1,5 @@
 import { useDisclosure } from "@nextui-org/react";
+import { Link } from "@nextui-org/react";
 import ModalWithForm from "../common/ModalWithForm";
 
 export default function InternationalServices() {
@@ -25,18 +26,27 @@ export default function InternationalServices() {
                     <p className="mb-10 SM:mb-5">
                         Наши услуги охватывают все аспекты ВЭД – от таможенного оформления и логистики до юридической
                         поддержки и финансового консалтинга. Мы предлагаем:{<br />}
-                        <span className="text-customPurple font-bold">Таможенное оформление:</span> Быстрое и точное
-                        декларирование товаров, что гарантирует соблюдение всех необходимых регуляторных требований.
+                        <Link href="/in-development" className="text-customPurple font-bold">
+                            Таможенное оформление:
+                        </Link>{" "}
+                        Быстрое и точное декларирование товаров, что гарантирует соблюдение всех необходимых
+                        регуляторных требований.
                         {<br />}
-                        <span className="text-customPurple font-bold">Логистическое сопровождение:</span> Эффективное
-                        планирование и выполнение международных перевозок любыми видами транспорта.{<br />}
-                        <span className="text-customPurple font-bold">Юридическая поддержка:</span> Консультации по
-                        вопросам международного торгового права, помощь в заключении контрактов и защита прав в торговых
-                        спорах.
+                        <Link href="/in-development" className="text-customPurple font-bold">
+                            Логистическое сопровождение:
+                        </Link>{" "}
+                        Эффективное планирование и выполнение международных перевозок любыми видами транспорта.{<br />}
+                        <Link href="/in-development" className="text-customPurple font-bold">
+                            Юридическая поддержка:
+                        </Link>{" "}
+                        Консультации по вопросам международного торгового права, помощь в заключении контрактов и защита
+                        прав в торговых спорах.
                         {<br />}
-                        <span className="text-customPurple font-bold">Финансовые услуги:</span> Оптимизация платежей,
-                        валютные операции и управление финансовыми рисками, обеспечивающие стабильность и прибыльность
-                        ваших международных операций.
+                        <Link href="/in-development" className="text-customPurple font-bold">
+                            Финансовые услуги:
+                        </Link>{" "}
+                        Оптимизация платежей, валютные операции и управление финансовыми рисками, обеспечивающие
+                        стабильность и прибыльность ваших международных операций.
                     </p>
                     <div className="flex gap-[10px] items-center">
                         <span className="h-[10px] w-[10px] bg-customPurple rounded-full shrink-0" />

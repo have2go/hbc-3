@@ -10,7 +10,7 @@ import FormEn from "./components/sections/FormEn";
 import InternationalServicesEn from "./components/sections/InternationalServicesEn";
 import FooterEn from "./components/common/FooterEn";
 
-export default function HomeEng() {
+export default function HomeEn() {
     return (
         <section className="relative text-customGray" id="main">
             <Image

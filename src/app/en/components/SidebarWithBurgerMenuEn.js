@@ -77,35 +77,35 @@ export function SidebarWithBurgerMenuEn() {
                             <AccordionBody className="py-1">
                                 <List className="p-0">
                                     <ListItem>
-                                        <Link href="#" className={`${montserrat.className}`}>
+                                        <Link href="/en/in-development" className={`${montserrat.className}`}>
                                             Import
                                         </Link>
                                     </ListItem>
 
                                     <ListItem>
-                                        <Link href="#" className={`${montserrat.className}`}>
+                                        <Link href="/en/in-development" className={`${montserrat.className}`}>
                                             Export
                                         </Link>
                                     </ListItem>
                                     <ListItem>
-                                        <Link href="#" className={`${montserrat.className}`}>
+                                        <Link href="/en/in-development" className={`${montserrat.className}`}>
                                             Transit
                                         </Link>
                                     </ListItem>
                                     <ListItem>
-                                        <Link href="#" className={`${montserrat.className}`}>
+                                        <Link href="/en/in-development" className={`${montserrat.className}`}>
                                             Guarantee
                                         </Link>
                                     </ListItem>
                                 </List>
                             </AccordionBody>
                             <ListItem>
-                                <Link href="#" className="">
+                                <Link href="/en/in-development" className="">
                                     Excise
                                 </Link>
                             </ListItem>
                             <ListItem>
-                                <Link href="#" className="">
+                                <Link href="/en/in-development" className="">
                                     Logistics
                                 </Link>
                             </ListItem>
@@ -113,15 +113,14 @@ export function SidebarWithBurgerMenuEn() {
 
                         <hr className="my-2 border-blue-gray-50" />
                         <ListItem>
-                            <Link href="#" className="">
+                            <Link href="/en/in-development" className="">
                                 About Us
                             </Link>
                         </ListItem>
-                        <ListItem>
-                            <Link href="#" className="">
-                                Contacts
-                            </Link>
-                        </ListItem>
+
+                        <Link href="/en/contacts" className="">
+                            <ListItem>Contacts</ListItem>
+                        </Link>
                     </List>
                     <div className="mx-auto text-center pt-10">
                         <p className="">+7(812) 600-48-49 (доб. 209)</p>

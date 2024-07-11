@@ -39,7 +39,9 @@ export default function FooterEn() {
                         </Link>
                     </div>
                     <div className="flex flex-col gap-3 text-[#909090]">
-                        <p className="font-medium text-white">CUSTOMS CLEARANCE</p>
+                        <Link href="/en/customs-clearance" className="font-medium text-white">
+                            CUSTOMS CLEARANCE
+                        </Link>
                         <Link href="/en/in-development" className="text-sm">
                             Import
                         </Link>
@@ -191,7 +193,7 @@ export default function FooterEn() {
                 </List>
                 <div className="bg-palePurple rounded-[20px] p-6 flex flex-col gap-5 text-white SM:gap-3">
                     <p className="text-2xl SM:text-xl">SAINT PETERSBURG</p>
-                    <p className="">+7(812) 600-48-49 (EXT. 209)</p>
+                    <p className="">+7(812) 600-48-49</p>
                     <p className="">zayavka@hb-customs.ru</p>
                     <div className="flex flex-col gap-1 SM:text-sm">
                         <p className="">

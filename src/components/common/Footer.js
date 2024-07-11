@@ -23,9 +23,15 @@ export default function Footer() {
                         <Link href="/" className="font-medium text-customYellow">
                             HIGHBROW CUSTOMS
                         </Link>
-                        <Link href='/in-development' className="text-sm">О компании</Link>
-                        <Link href='/in-development' className="text-sm">Реквизиты</Link>
-                        <Link href='/in-development' className="text-sm">FAQ</Link>
+                        <Link href="/in-development" className="text-sm">
+                            О компании
+                        </Link>
+                        <Link href="/in-development" className="text-sm">
+                            Реквизиты
+                        </Link>
+                        <Link href="/in-development" className="text-sm">
+                            FAQ
+                        </Link>
                     </div>
                     <div className="flex flex-col gap-3">
                         <Link href="/payment-agent" className={`font-medium text-white`}>
@@ -33,22 +39,46 @@ export default function Footer() {
                         </Link>
                     </div>
                     <div className="flex flex-col gap-3 text-[#909090]">
-                        <p className="font-medium text-white">ТАМОЖЕННОЕ ОФОРМЛЕНИЕ</p>
-                        <Link href='/in-development' className="text-sm">Импорт</Link>
-                        <Link href='/in-development' className="text-sm">Экспорт</Link>
-                        <Link href='/in-development' className="text-sm">Транзит</Link>
-                        <Link href='/in-development' className="text-sm">Поручительство</Link>
+                        <Link href="customs-clearance" className="font-medium text-white">
+                            ТАМОЖЕННОЕ ОФОРМЛЕНИЕ
+                        </Link>
+                        <Link href="/in-development" className="text-sm">
+                            Импорт
+                        </Link>
+                        <Link href="/in-development" className="text-sm">
+                            Экспорт
+                        </Link>
+                        <Link href="/in-development" className="text-sm">
+                            Транзит
+                        </Link>
+                        <Link href="/in-development" className="text-sm">
+                            Поручительство
+                        </Link>
                     </div>
                     <div className="flex flex-col gap-3">
-                        <Link href='/in-development' className="font-medium text-white">АКЦИЗНЫЕ ТОВАРЫ</Link>
+                        <Link href="/in-development" className="font-medium text-white">
+                            АКЦИЗНЫЕ ТОВАРЫ
+                        </Link>
                     </div>
                     <div className="flex flex-col gap-3 text-[#909090]">
-                        <Link href='/in-development' className="font-medium text-white">ЛОГИСТИКА</Link>
-                        <Link href='/in-development' className="text-sm">Контейнерные перевозки</Link>
-                        <Link href='/in-development' className="text-sm">Автоперевозки</Link>
-                        <Link href='/in-development' className="text-sm">Морские перевозки</Link>
-                        <Link href='/in-development' className="text-sm">Авиаперевозки</Link>
-                        <Link href='/in-development' className="text-sm">Ж/Д перевозки</Link>
+                        <Link href="/in-development" className="font-medium text-white">
+                            ЛОГИСТИКА
+                        </Link>
+                        <Link href="/in-development" className="text-sm">
+                            Контейнерные перевозки
+                        </Link>
+                        <Link href="/in-development" className="text-sm">
+                            Автоперевозки
+                        </Link>
+                        <Link href="/in-development" className="text-sm">
+                            Морские перевозки
+                        </Link>
+                        <Link href="/in-development" className="text-sm">
+                            Авиаперевозки
+                        </Link>
+                        <Link href="/in-development" className="text-sm">
+                            Ж/Д перевозки
+                        </Link>
                     </div>
                 </div>
                 <List className={`text-white ${montserrat.className} p-0 2xl:hidden`}>
@@ -86,7 +116,6 @@ export default function Footer() {
                                         Экспорт
                                     </Link>
                                 </ListItem>
-
                                 <ListItem>
                                     <Link href="/in-development" className="px-[5px] XL:px-[3px]  ">
                                         Импорт
@@ -163,7 +192,7 @@ export default function Footer() {
                 </List>
                 <div className="bg-palePurple rounded-[20px] p-6 flex flex-col gap-5 text-white SM:gap-3">
                     <p className="text-2xl SM:text-xl">САНКТ-ПЕТЕРБУРГ</p>
-                    <p className="">+7(812) 600-48-49 (доб. 209)</p>
+                    <p className="">+7(812) 600-48-49</p>
                     <p className="">zayavka@hb-customs.ru</p>
                     <div className="flex flex-col gap-1 SM:text-sm">
                         <p className="">

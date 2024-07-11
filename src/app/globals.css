@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import url("../css/reviewsSlider.css");
-@import url('../css/embla.css');
+@import url("../css/embla.css");
 
 .country {
     fill: #e2ce0a;
@@ -17,4 +17,18 @@
 
 .country:hover {
     fill: #ffe600;
+}
+
+/* .service-card {
+
+} */
+
+.service-card:hover .service-card__color-block {
+    background-color: #e2ce0a;
+}
+
+.service-card:hover .service-card__image {
+    --tw-saturate: saturate(1);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate)
+        var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }

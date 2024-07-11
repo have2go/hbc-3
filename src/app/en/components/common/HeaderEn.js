@@ -57,7 +57,7 @@ export default function HeaderEn() {
                 </div>
                 <div className="flex flex-col text-right text-base font-medium text-nowrap 2XL:text-xs text-white">
                     <p className="">zayavka@hb-customs.ru</p>
-                    <p className="">+7(812) 600-48-49 (EXT. 209)</p>
+                    <p className="">+7(812) 600-48-49</p>
                 </div>
             </header>
             <header className="flex flex-col 1200max:hidden 1.5xl:hidden">

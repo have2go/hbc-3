@@ -32,14 +32,8 @@ export default function Header() {
                     >
                         Платёжный агент
                     </Link>
-                    <Link href="/in-development" className="px-[5px] border-r">
-                        Экспорт
-                    </Link>
-                    <Link href="/in-development" className="px-[5px] border-r">
-                        Импорт
-                    </Link>
-                    <Link href="/in-development" className="px-[5px] border-r">
-                        Транзит
+                    <Link href="/customs-clearance" className="px-[5px] XL:px-[3px] border-r">
+                        Таможенное оформление
                     </Link>
                     <Link href="/in-development" className="px-[5px] border-r">
                         Акцизные товары
@@ -53,13 +47,16 @@ export default function Header() {
                     <Link href="/in-development" className="px-[5px] border-r">
                         О нас
                     </Link>
-                    <Link href="/contacts" className="px-[5px]">
+                    <Link
+                        href="/contacts"
+                        className={`px-[5px] ${pathname === "/contacts" ? "text-black" : "text-white"}`}
+                    >
                         Контакты
                     </Link>
                 </div>
                 <div className="flex flex-col text-right text-base font-medium text-nowrap 2XL:text-xs ">
                     <p className="">zayavka@hb-customs.ru</p>
-                    <p className="">+7(812) 600-48-49 (доб. 209)</p>
+                    <p className="">+7(812) 600-48-49</p>
                 </div>
             </header>
             <header className="flex flex-col 1200max:hidden 1.5xl:hidden">
@@ -83,14 +80,8 @@ export default function Header() {
                         <Link href="/payment-agent" className="px-[5px] XL:px-[3px] border-r">
                             Платёжный агент
                         </Link>
-                        <Link href="/in-development" className="px-[5px] XL:px-[3px] border-r">
-                            Экспорт
-                        </Link>
-                        <Link href="/in-development" className="px-[5px] XL:px-[3px] border-r">
-                            Импорт
-                        </Link>
-                        <Link href="/in-development" className="px-[5px] XL:px-[3px] border-r">
-                            Транзит
+                        <Link href="/customs-clearance" className="px-[5px] XL:px-[3px] border-r">
+                            Таможенное оформление
                         </Link>
                         <Link href="/in-development" className="px-[5px] XL:px-[3px] border-r">
                             Акцизные товары

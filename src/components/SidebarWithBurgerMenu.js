@@ -123,7 +123,7 @@ export function SidebarWithBurgerMenu() {
                         </Link>
                     </List>
                     <div className="mx-auto text-center pt-10">
-                        <p className="">+7(812) 600-48-49 (доб. 209)</p>
+                        <p className="">+7(812) 600-48-49</p>
                         <p className="">zayavka@hb-customs.ru</p>
                     </div>
                 </Card>

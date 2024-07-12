@@ -55,7 +55,7 @@ export default function Header() {
                     </Link>
                 </div>
                 <div className="flex flex-col text-right text-base font-medium text-nowrap 2XL:text-xs ">
-                    <p className="">zayavka@hb-customs.ru</p>
+                    <p className="">contact@hb-customs.ru</p>
                     <p className="">+7(812) 600-48-49</p>
                 </div>
             </header>

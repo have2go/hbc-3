@@ -1,38 +1,52 @@
-import { useState } from "react";
+"use client";
+import { useEffect, useState } from "react";
 
-export default function Service() {
+export default function Service({ title, text, isActive }) {
   const [isDisabled, setIsDisabled] = useState(false);
   const [isHidden, setIsHidden] = useState(true);
 
+  useEffect(() => {
+    setIsDisabled(!isActive);
+  }, [isActive]);
   return (
-    <button
-      className="grid grid-cols-[24px_1fr] gap-11 border-2 border-customPurple rounded-[20px] items-center"
-      disabled={isDisabled}
-      onClick={() => setIsDisabled(!isDisabled)}
+    <div
+      className={`grid grid-cols-[24px_1fr] gap-11 border-2 ${
+        isDisabled ? "border-bgGray" : "border-customPurple"
+      }  rounded-[20px] items-center relative`}
     >
-      <div className="h-[calc(100%-25px)] w-6 bg-customPurple/50 rounded-r-[20px]"></div>
-      <div className="">
+      <button
+        className={`top-0 left-0 h-full w-full z-50 rounded-2xl ${
+          isDisabled ? "cursor-default" : "cursor-pointer"
+        } ${isHidden ? "absolute" : "hidden"}`}
+        disabled={isDisabled}
+        onClick={() => setIsHidden(false)}
+      ></button>
+      <div
+        className={`h-[calc(100%-25px)] w-6 ${
+          isDisabled ? "bg-bgGray" : "bg-customPurple/50"
+        }  rounded-r-[20px]`}
+      ></div>
+      <div className="mr-5">
         <div className="h-28 flex items-center">
-          <p className="font-bold text-2xl">Импорт 40</p>
+          <p className="font-bold text-2xl">{title}</p>
         </div>
-        <div className="hidden">
-          <p className="text-left">
-            Таможенная процедура выпуска для внутреннего потребления –
-            таможенная процедура, применяемая в отношении иностранных товаров, в
-            соответствии с которой товары находятся и используются на таможенной
-            территории Союза без ограничений по владению, пользованию и (или)
-            распоряжению ими, предусмотренных международными договорами и актами
-            в сфере таможенного регулирования в отношении иностранных товаров.
-            Товары, помещенные под таможенную процедуру выпуска для внутреннего
-            потребления, приобретают статус товаров Союза.
-          </p>
+        <div className={`${isHidden ? "hidden" : "block"}`}>
+          {text()}
           <div className="h-28 flex items-center">
             <p className="font-bold text-2xl">
               Стоимость декларирования товара: от 5000 руб.
             </p>
           </div>
+          <div className="w-full flex justify-end">
+            <button
+              className="px-4 py-2 bg-customYellow font-medium rounded-2xl mb-5"
+              onClick={() => setIsHidden(true)}
+            >
+              Свернуть
+            </button>
+          </div>
         </div>
       </div>
-    </button>
+    </div>
   );
 }

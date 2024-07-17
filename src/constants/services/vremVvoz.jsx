@@ -1,7 +1,7 @@
 export const vremVvoz = {
   title: "Временный ввоз (допуск)",
   text: () => (
-    <div className="flex flex-col text-left gap-5">
+    <div className="flex flex-col text-left gap-5 SM:text-sm">
       <p className="">
         Временный ввоз (допуск) – процедура, применяемая в отношении иностранных
         товаров, такие товары временно находятся и используются на таможенной

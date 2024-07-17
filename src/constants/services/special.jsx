@@ -1,7 +1,7 @@
 export const special = {
   title: "Специальная таможенная процедура",
   text: () => (
-    <div className="flex flex-col text-left gap-5">
+    <div className="flex flex-col text-left gap-5 SM:text-sm">
       <p className="">
         Специальная таможенная процедура - процедура, применяемая в отношении
         отдельных категорий иностранных товаров и товаров Союза. Товары

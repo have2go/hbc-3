@@ -3,11 +3,11 @@ import Section from "@/components/common/Section";
 export default function Customs() {
     return (
         <Section title={"Таможенное оформление"}>
-            <div className="flex flex-col gap-8 text-xl 2XL:text-base SM:text-sm">
+            <div className="flex flex-col gap-8 text-xl 2XL:text-base SM:text-sm SM:gap-5">
                 <p className="leading-[120%]">
                     Различают три направления перемещения товаров во внешнеэкономической   деятельности:
                 </p>
-                <ul className="pl-10">
+                <ul className="pl-10 SM:pl-0    ">
                     <li>
                         <div className="flex gap-[10px] items-center">
                             <span className="h-[10px] w-[10px] bg-customYellow rounded-full shrink-0" />

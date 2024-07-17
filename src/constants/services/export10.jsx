@@ -3,7 +3,7 @@ import Link from "next/link";
 export const export10 = {
   title: "Экспорт 10",
   text: () => (
-    <div className="flex flex-col text-left gap-5">
+    <div className="flex flex-col text-left gap-5 SM:text-sm">
       <p className="">
         Экспорт – таможенная процедура, применяемая в отношении товаров Союза, в
         соответствии с которой такие товары вывозятся с таможенной территории

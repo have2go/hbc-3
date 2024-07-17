@@ -1,7 +1,7 @@
 export const besposhl = {
   title: "Беспошлинная торговля",
   text: () => (
-    <div className="flex flex-col text-left gap-5">
+    <div className="flex flex-col text-left gap-5 SM:text-sm">
       <p className="">
         Беспошлинная торговля - процедура, применяемая в отношении иностранных
         товаров и товаров Союза, которые находятся и реализуются в розницу в

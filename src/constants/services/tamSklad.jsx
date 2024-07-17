@@ -1,7 +1,7 @@
 export const tamSklad = {
   title: "Таможенный склад",
   text: () => (
-    <div className="flex flex-col text-left gap-5">
+    <div className="flex flex-col text-left gap-5 SM:text-sm">
       <p className="">
         Таможенный склад – процедура, применяемая в отношении иностранных
         товаров, в соответствии с которой такие товары хранятся на таможенном

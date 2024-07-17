@@ -28,7 +28,7 @@ export default function Home() {
                 title="Оставить заявку"
                 subtitle="Заполните форму, и мы свяжемся с вами для предоставления детальной информации и персональных рекомендаций."
             />
-            <Reviews />
+            {/* <Reviews /> */}
             <InternationalServices />
             <Footer />
         </main>

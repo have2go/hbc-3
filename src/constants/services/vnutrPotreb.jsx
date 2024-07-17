@@ -1,7 +1,7 @@
 export const vnutrPotreb = {
   title: "Переработка для внутреннего потребления",
   text: () => (
-    <div className="flex flex-col text-left gap-5">
+    <div className="flex flex-col text-left gap-5 SM:text-sm">
       <p className="">
         Переработка для внутреннего потребления – процедура, применяемая в
         отношении иностранных товаров, с которыми совершаются операции по

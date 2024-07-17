@@ -1,7 +1,7 @@
 export const transit = {
   title: "Таможенный транзит",
   text: () => (
-    <div className="flex flex-col text-left gap-5">
+    <div className="flex flex-col text-left gap-5 SM:text-sm">
       <p className="">
         Таможенный транзит – таможенная процедура, в соответствии с которой
         товары перевозятся (транспортируются) от таможенного органа отправления

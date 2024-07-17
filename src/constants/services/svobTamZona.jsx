@@ -1,7 +1,7 @@
 export const svobTamZona = {
   title: "Свободная таможенная зона",
   text: () => (
-    <div className="flex flex-col text-left gap-5">
+    <div className="flex flex-col text-left gap-5 SM:text-sm">
       <p className="">
         Свободная таможенная зона - процедура, применяемая в отношении
         иностранных товаров и товаров Союза, в соответствии с которой такие

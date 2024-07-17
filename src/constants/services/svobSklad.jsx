@@ -1,7 +1,7 @@
 export const svobSklad = {
   title: "Свободный склад",
   text: () => (
-    <div className="flex flex-col text-left gap-5">
+    <div className="flex flex-col text-left gap-5 SM:text-sm">
       <p className="">
         Свободный склад - процедура, применяемая в отношении иностранных товаров
         и товаров Союза, которые размещаются и используются на свободном складе

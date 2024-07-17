@@ -16,7 +16,7 @@ export default function Form() {
     };
 
     return (
-        <section className="py-[10px] my-20 LG:mt-10 MD:py-1 MD:px-7 XSM:px-4">
+        <section className="py-[10px] my-20 LG:mt-10 MD:py-1 MD:px-7 XSM:px-4 SM:mt-0 SM:mb-6">
             <form
                 className="p-[30px] max-w-[1400px] w-full mx-auto border border-customPurple rounded-[20px] MD:p-5 SM:px-3 bg-white 2XL:max-w-[1000px] XL:max-w-[750px]"
                 onSubmit={onSubmitBtn}

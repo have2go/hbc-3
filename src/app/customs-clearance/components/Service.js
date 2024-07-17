@@ -10,7 +10,7 @@ export default function Service({ title, text, isActive }) {
   }, [isActive]);
   return (
     <div
-      className={`grid grid-cols-[24px_1fr] gap-11 border-2 ${
+      className={`grid grid-cols-[24px_1fr] gap-11 SM:gap-5 border-2 ${
         isDisabled ? "border-bgGray" : "border-customPurple"
       }  rounded-[20px] items-center relative`}
     >
@@ -27,13 +27,13 @@ export default function Service({ title, text, isActive }) {
         }  rounded-r-[20px]`}
       ></div>
       <div className="mr-5">
-        <div className="h-28 flex items-center">
-          <p className="font-bold text-2xl">{title}</p>
+        <div className="h-28 flex items-center LG:h-24 SM:h-20">
+          <p className="font-bold text-2xl LG:text-xl SM:text-lg">{title}</p>
         </div>
         <div className={`${isHidden ? "hidden" : "block"}`}>
           {text()}
-          <div className="h-28 flex items-center">
-            <p className="font-bold text-2xl">
+          <div className="h-28 flex items-center LG:h-24 SM:h-20">
+            <p className="font-bold text-2xl LG:text-xl SM:text-lg">
               Стоимость декларирования товара: от 5000 руб.
             </p>
           </div>

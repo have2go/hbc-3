@@ -39,7 +39,7 @@ export default function Services() {
       }
     >
       <div className="flex flex-col">
-        <div className="py-16 w-[95%] mx-auto grid grid-cols-[460px_460px_460px] justify-between">
+        <div className="py-16 w-[95%] mx-auto grid grid-cols-3 gap-10 1.5XL:w-full 1.5XL:gap-5 XL:pt-6 MD:grid-cols-1 SM:pt-0 SM:pb-6 SM:max-w-[320px] justify-between">
           <div
             className={`border-2 ${
               selectedType === "vvoz" ? "border-customYellow" : "border-bgGray"
@@ -57,10 +57,10 @@ export default function Services() {
               src={vvoz}
               className={`${
                 selectedType === "vvoz" ? "saturate-100" : "saturate-0"
-              } hover:saturate-100 transition-all service-card__image`}
+              } hover:saturate-100 transition-all service-card__image w-full`}
               alt="Ввоз"
             />
-            <p className="py-6 w-11/12 text-center mx-auto ">
+            <p className="py-6 w-11/12 text-center mx-auto XL:py-4 XL:text-sm LG:py-3 ">
               Ввоз иностранного товара на территорию Таможенного союза
             </p>
           </div>
@@ -81,10 +81,10 @@ export default function Services() {
               src={vivoz}
               className={`${
                 selectedType === "vivoz" ? "saturate-100" : "saturate-0"
-              } hover:saturate-100 transition-all service-card__image`}
+              } hover:saturate-100 transition-all service-card__image w-full`}
               alt="Вывоз"
             />
-            <p className="py-6 w-11/12 text-center mx-auto ">
+            <p className="py-6 w-11/12 text-center mx-auto XL:py-4 XL:text-sm LG:py-3">
               Вывоз товара с территории Таможенного союза
             </p>
           </div>
@@ -107,10 +107,10 @@ export default function Services() {
               src={trucks}
               className={`${
                 selectedType === "transit" ? "saturate-100" : "saturate-0"
-              } hover:saturate-100 transition-all service-card__image`}
+              } hover:saturate-100 transition-all service-card__image w-full`}
               alt="Транзит"
             />
-            <p className="py-6 w-11/12 text-center mx-auto ">
+            <p className="py-6 w-11/12 text-center mx-auto XL:py-4 XL:text-sm LG:py-3 LG:text-xs">
               Перемещение иностранного товара от таможенного органа отправления
               до таможенного органа назначения
             </p>

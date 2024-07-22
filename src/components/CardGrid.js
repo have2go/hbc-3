@@ -2,8 +2,9 @@ import { cardsS } from "@/constants/cards";
 import Card from "./Card";
 import ModalWithForm from "./common/ModalWithForm";
 import { useDisclosure } from "@nextui-org/react";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useMask } from "@react-input/mask";
+import emailjs from "@emailjs/browser";
 
 export default function CardGrid() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -11,13 +12,26 @@ export default function CardGrid() {
     const [isLoaded, setIsLoaded] = useState(false);
     const inputRef = useMask({ mask: "+7 (___) ___-__-__", replacement: { _: /\d/ }, showMask: true });
 
-    const onSubmitBtn = e => {
+    const form = useRef();
+
+    const sendEmail = e => {
         e.preventDefault();
         setButtonText("Отправка...");
-        setTimeout(() => {
-            setIsLoaded(true);
-            setButtonText("Спасибо!");
-        }, 1000);
+        emailjs
+            .sendForm("service_3w4w60i", "template_dj6kaud", form.current, {
+                publicKey: "o3u4fext32rohw6Zf",
+            })
+            .then(
+                () => {
+                    console.log("SUCCESS!");
+                    setIsLoaded(true);
+                    setButtonText("Спасибо!");
+                },
+                error => {
+                    console.log("FAILED...", error);
+                    setButtonText("Ошибка.");
+                }
+            );
     };
 
     return (
@@ -29,21 +43,22 @@ export default function CardGrid() {
                 <div className=" flex flex-col box-border border-2 border-customYellow rounded-[21px] max-w-[400px]">
                     <form
                         className="flex flex-col items-center px-5 py-7 gap-6 2XL:gap-4 2XL:py-5"
-                        onSubmit={onSubmitBtn}
+                        onSubmit={sendEmail}
+                        ref={form}
                     >
                         <p className="text-XL 2XL:text-lg">Оставить заявку на услугу</p>
                         <input
                             type="text"
                             className="bg-bgGray h-12 px-5 rounded focus:outline-customYellow w-full"
                             placeholder="Имя*"
-                            name="name"
+                            name="from_name"
                             required
                         />
                         <input
                             type="text"
                             className="bg-bgGray h-12  px-5 rounded focus:outline-customYellow w-full"
                             placeholder="Телефон*"
-                            name="phone"
+                            name="from_phone"
                             required
                             ref={inputRef}
                         />
@@ -51,12 +66,13 @@ export default function CardGrid() {
                             type="email"
                             className="bg-bgGray h-12  px-5 rounded focus:outline-customYellow w-full"
                             placeholder="Email*"
-                            name="email"
+                            name="from_email"
                             required
                         />
                         <textarea
                             className="bg-bgGray col-start-1 col-end-4 min-h-20 py-3 px-5 rounded focus:outline-customYellow w-full 2xl:min-h-10"
                             placeholder="Сообщение"
+                            name="message"
                         ></textarea>
                         <div className="w-full flex">
                             <button
@@ -64,6 +80,7 @@ export default function CardGrid() {
                                 className={`h-12 ${
                                     isLoaded ? "bg-[#7d7] text-white" : "bg-gradient-to-r from-[#F6E960] to-[#E4D119]"
                                 } px-5 max-w-72 w-full rounded font-medium`}
+                                disabled={isLoaded}
                             >
                                 {buttonText}
                             </button>

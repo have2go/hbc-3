@@ -1,5 +1,6 @@
 import { Modal, ModalContent, ModalBody } from "@nextui-org/react";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 // import { useMask } from "@react-input/mask";
 
 export default function ModalWithFormEn({ isOpen, onOpenChange, title }) {
@@ -7,13 +8,33 @@ export default function ModalWithFormEn({ isOpen, onOpenChange, title }) {
     const [buttonText, setButtonText] = useState("Send");
     const [isLoaded, setIsLoaded] = useState(false);
 
-    const onSubmitBtn = e => {
+    const form = useRef();
+
+    const sendEmail = e => {
         e.preventDefault();
         setButtonText("Sending...");
-        setTimeout(() => {
-            setIsLoaded(true);
-            setButtonText("Thanks!");
-        }, 1000);
+        emailjs
+            .sendForm("service_3w4w60i", "template_dj6kaud", form.current, {
+                publicKey: "o3u4fext32rohw6Zf",
+            })
+            .then(
+                () => {
+                    console.log("SUCCESS!");
+                    setIsLoaded(true);
+                    setButtonText("Thanks!");
+                    setTimeout(() => {
+                        onOpenChange();
+                    }, 1000);
+                    setTimeout(() => {
+                        setIsLoaded(false);
+                        setButtonText("Send");
+                    }, 1500);
+                },
+                error => {
+                    console.log("FAILED...", error);
+                    setButtonText("Error.");
+                }
+            );
     };
 
     return (
@@ -25,21 +46,22 @@ export default function ModalWithFormEn({ isOpen, onOpenChange, title }) {
                         <ModalBody>
                             <form
                                 className="flex flex-col items-center px-5 py-7 gap-6 SM:gap-4 SM:px-0"
-                                onSubmit={onSubmitBtn}
+                                onSubmit={sendEmail}
+                                ref={form}
                             >
                                 <p className="text-xl">{title}</p>
                                 <input
                                     type="text"
                                     className="bg-bgGray h-12 px-5 rounded focus:outline-customYellow w-full"
                                     placeholder="Name*"
-                                    name="name"
+                                    name="from_name"
                                     required
                                 />
                                 <input
                                     type="text"
                                     className="bg-bgGray h-12  px-5 rounded focus:outline-customYellow w-full"
                                     placeholder="Phone*"
-                                    name="phone"
+                                    name="from_phone"
                                     required
                                     // ref={inputRef}
                                 />
@@ -47,12 +69,13 @@ export default function ModalWithFormEn({ isOpen, onOpenChange, title }) {
                                     type="email"
                                     className="bg-bgGray h-12  px-5 rounded focus:outline-customYellow w-full"
                                     placeholder="Email*"
-                                    name="email"
+                                    name="from_email"
                                     required
                                 />
                                 <textarea
                                     className="bg-bgGray col-start-1 col-end-4 min-h-20 py-3 px-5 rounded focus:outline-customYellow w-full"
                                     placeholder="Message"
+                                    name="message"
                                 ></textarea>
                                 <div className="w-full flex">
                                     <button

@@ -1,32 +1,39 @@
 import { Modal, ModalContent, ModalBody } from "@nextui-org/react";
 import React, { useEffect, useRef, useState } from "react";
 import { useMask } from "@react-input/mask";
+import emailjs from "@emailjs/browser";
 
-export default function ModalWithFormMap({ isOpen, onOpenChange, title }) {
+export default function ModalWithFormMap({ isOpen, onOpenChange, title, country }) {
     const inputRef = useMask({ mask: "+7 (___) ___-__-__", replacement: { _: /\d/ }, showMask: true });
     const [buttonText, setButtonText] = useState("Отправить");
     const [isLoaded, setIsLoaded] = useState(false);
+    const form = useRef();
 
-    const onSubmitBtn = e => {
+    const sendEmail = e => {
         e.preventDefault();
         setButtonText("Отправка...");
-        fetch("/public/php/sendMail.php", {
-            method: "POST",
-            body: {
-                name: "Ben",
-                phone: "32423423",
-                email: "asd@sdf.com",
-                text: "teeeeeeeeext",
-            },
-        })
-            .then(res => console.log(res))
-            .catch(error => {
-                console.error("Error submitting form:", error);
-            });
-        setTimeout(() => {
-            setIsLoaded(true);
-            setButtonText("Спасибо!");
-        }, 1000);
+        emailjs
+            .sendForm("service_3w4w60i", "template_296wfbd", form.current, {
+                publicKey: "o3u4fext32rohw6Zf",
+            })
+            .then(
+                () => {
+                    console.log("SUCCESS!");
+                    setIsLoaded(true);
+                    setButtonText("Спасибо!");
+                    setTimeout(() => {
+                        onOpenChange();
+                    }, 1000);
+                    setTimeout(() => {
+                        setIsLoaded(false);
+                        setButtonText("Отправить");
+                    }, 1500);
+                },
+                error => {
+                    console.log("FAILED...", error);
+                    setButtonText("Ошибка.");
+                }
+            );
     };
 
     return (
@@ -36,7 +43,11 @@ export default function ModalWithFormMap({ isOpen, onOpenChange, title }) {
                     <>
                         {/* <ModalHeader className="flex flex-col gap-1 text-xl"></ModalHeader> */}
                         <ModalBody>
-                            <form className="flex flex-col items-center px-2 py-4 gap-4 SM:px-0" onSubmit={onSubmitBtn}>
+                            <form
+                                className=" relative flex flex-col items-center px-2 py-4 gap-4 SM:px-0"
+                                onSubmit={sendEmail}
+                                ref={form}
+                            >
                                 <div className="flex flex-col gap-3">
                                     <p className="text-xl">{title}</p>
                                     <p className="text-sm">
@@ -45,19 +56,27 @@ export default function ModalWithFormMap({ isOpen, onOpenChange, title }) {
                                         информацию.
                                     </p>
                                 </div>
-
+                                <input
+                                    type="text"
+                                    className="absolute top-0 left-0 opacity-0"
+                                    name="from_country"
+                                    value={country}
+                                    onChange={e => {
+                                        console.log(e.target);
+                                    }}
+                                />
                                 <input
                                     type="text"
                                     className="bg-bgGray h-12 px-5 rounded focus:outline-customYellow w-full"
                                     placeholder="Имя*"
-                                    name="name"
+                                    name="from_name"
                                     required
                                 />
                                 <input
                                     type="text"
                                     className="bg-bgGray h-12  px-5 rounded focus:outline-customYellow w-full"
                                     placeholder="Телефон*"
-                                    name="phone"
+                                    name="from_phone"
                                     required
                                     ref={inputRef}
                                 />
@@ -65,13 +84,13 @@ export default function ModalWithFormMap({ isOpen, onOpenChange, title }) {
                                     type="email"
                                     className="bg-bgGray h-12  px-5 rounded focus:outline-customYellow w-full"
                                     placeholder="Email*"
-                                    name="email"
+                                    name="from_email"
                                     required
                                 />
                                 <textarea
                                     className="bg-bgGray col-start-1 col-end-4 min-h-20 py-3 px-5 rounded focus:outline-customYellow w-full"
                                     placeholder="Сообщение"
-                                    name="text"
+                                    name="message"
                                 ></textarea>
                                 <div className="w-full flex">
                                     <button

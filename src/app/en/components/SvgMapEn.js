@@ -32,8 +32,10 @@ export default function SvgMap() {
 
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const [formTitle, setFormTitle] = useState("Contact our representative for transactions via Russia");
+    const [country, setCountry] = useState("Russia");
 
     const onOpenModal = country => {
+        setCountry(country);
         setFormTitle(`Contact our representative for transactions via ${country}`);
         onOpen();
     };
@@ -47,7 +49,7 @@ export default function SvgMap() {
     };
     return (
         <div className="">
-            <ModalWithFormMapEn isOpen={isOpen} onOpenChange={onOpenChange} title={formTitle} />
+            <ModalWithFormMapEn isOpen={isOpen} onOpenChange={onOpenChange} title={formTitle} country={country} />
             <svg viewBox="0 0 2480 1468" className="absolute top-0 left-0 h-auto">
                 <path
                     className="country"

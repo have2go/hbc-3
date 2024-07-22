@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 // import { useMask } from "@react-input/mask";
 
 export default function FormEn() {
@@ -6,20 +7,34 @@ export default function FormEn() {
     const [buttonText, setButtonText] = useState("Send");
     const [isLoaded, setIsLoaded] = useState(false);
 
-    const onSubmitBtn = e => {
+    const form = useRef();
+
+    const sendEmail = e => {
         e.preventDefault();
         setButtonText("Sending...");
-        setTimeout(() => {
-            setIsLoaded(true);
-            setButtonText("Thanks!");
-        }, 1000);
+        emailjs
+            .sendForm("service_3w4w60i", "template_dj6kaud", form.current, {
+                publicKey: "o3u4fext32rohw6Zf",
+            })
+            .then(
+                () => {
+                    console.log("SUCCESS!");
+                    setIsLoaded(true);
+                    setButtonText("Thanks!");
+                },
+                error => {
+                    console.log("FAILED...", error);
+                    setButtonText("Error.");
+                }
+            );
     };
 
     return (
         <section className="pt-20 LG:pt-10 px-10 MD:px-7 XSM:px-4">
             <form
                 className="p-[30px] max-w-[1400px] w-full mx-auto border-2 border-customYellow rounded-[20px] MD:p-5 SM:px-3"
-                onSubmit={onSubmitBtn}
+                onSubmit={sendEmail}
+                ref={form}
             >
                 <h2 className="text-4xl LG:text-3xl SM:text-2xl">Request a service</h2>
                 <p className="mt-5 mb-10 text-[#5E5E62] LG:text-sm MD:mt-4 MD:mb-6 MD:text-xs SM:mt-2 SM:mb-4 SM:text-[11px]">
@@ -31,14 +46,14 @@ export default function FormEn() {
                         type="text"
                         className="bg-bgGray h-12 px-5 MD:px-2 MD:text-sm rounded focus:outline-customYellow"
                         placeholder="Name*"
-                        name="name"
+                        name="from_name"
                         required
                     />
                     <input
                         type="text"
                         className="bg-bgGray h-12  px-5 MD:px-2 MD:text-sm rounded focus:outline-customYellow"
                         placeholder="Phone*"
-                        name="phone"
+                        name="from_phone"
                         required
                         // ref={inputRef}
                     />
@@ -46,12 +61,13 @@ export default function FormEn() {
                         type="email"
                         className="bg-bgGray h-12  px-5 MD:px-2 MD:text-sm rounded focus:outline-customYellow"
                         placeholder="Email*"
-                        name="email"
+                        name="from_email"
                         required
                     />
                     <textarea
                         className="bg-bgGray col-start-1 col-end-4 min-h-20 py-3 px-5 MD:px-2 MD:text-sm rounded focus:outline-customYellow SM:col-end-auto"
                         placeholder="Message"
+                        name="message"
                     ></textarea>
                     <div className="col-start-1 col-end-4 flex gap-5 SM:col-end-auto SM:flex-col">
                         <button
@@ -59,6 +75,7 @@ export default function FormEn() {
                             className={`h-12 ${
                                 isLoaded ? "bg-[#7d7] text-white" : "bg-gradient-to-r from-[#F6E960] to-[#E4D119]"
                             } px-5 max-w-72 w-full rounded font-medium`}
+                            disabled={isLoaded}
                         >
                             {buttonText}
                         </button>

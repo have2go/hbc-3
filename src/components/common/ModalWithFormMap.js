@@ -1,5 +1,5 @@
 import { Modal, ModalContent, ModalBody } from "@nextui-org/react";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useMask } from "@react-input/mask";
 
 export default function ModalWithFormMap({ isOpen, onOpenChange, title }) {
@@ -10,6 +10,19 @@ export default function ModalWithFormMap({ isOpen, onOpenChange, title }) {
     const onSubmitBtn = e => {
         e.preventDefault();
         setButtonText("Отправка...");
+        fetch("../../php/sendMail.php", {
+            method: "POST",
+            body: {
+                name: "Ben",
+                phone: "32423423",
+                email: "asd@sdf.com",
+                text: "teeeeeeeeext",
+            },
+        })
+            .then(res => console.log(res))
+            .catch(error => {
+                console.error("Error submitting form:", error);
+            });
         setTimeout(() => {
             setIsLoaded(true);
             setButtonText("Спасибо!");
@@ -23,10 +36,7 @@ export default function ModalWithFormMap({ isOpen, onOpenChange, title }) {
                     <>
                         {/* <ModalHeader className="flex flex-col gap-1 text-xl"></ModalHeader> */}
                         <ModalBody>
-                            <form
-                                className="flex flex-col items-center px-2 py-4 gap-4 SM:px-0"
-                                onSubmit={onSubmitBtn}
-                            >
+                            <form className="flex flex-col items-center px-2 py-4 gap-4 SM:px-0" onSubmit={onSubmitBtn}>
                                 <div className="flex flex-col gap-3">
                                     <p className="text-xl">{title}</p>
                                     <p className="text-sm">
@@ -61,6 +71,7 @@ export default function ModalWithFormMap({ isOpen, onOpenChange, title }) {
                                 <textarea
                                     className="bg-bgGray col-start-1 col-end-4 min-h-20 py-3 px-5 rounded focus:outline-customYellow w-full"
                                     placeholder="Сообщение"
+                                    name="text"
                                 ></textarea>
                                 <div className="w-full flex">
                                     <button

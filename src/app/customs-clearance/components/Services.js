@@ -43,7 +43,7 @@ export default function Services() {
           <div
             className={`border-2 ${
               selectedType === "vvoz" ? "border-customYellow" : "border-bgGray"
-            } border-b-0 rounded-t-[20px] hover:border-customYellow service-card cursor-pointer transition-all`}
+            } border-b-0 rounded-t-[20px] hover:border-customYellow hover:scale-[1.01] service-card cursor-pointer transition-all`}
             onClick={() => {
               setSelectedType("vvoz");
             }}
@@ -67,7 +67,7 @@ export default function Services() {
           <div
             className={`border-2 ${
               selectedType === "vivoz" ? "border-customYellow" : "border-bgGray"
-            } border-b-0 rounded-t-[20px] hover:border-customYellow service-card cursor-pointer transition-all`}
+            } border-b-0 rounded-t-[20px] hover:border-customYellow hover:scale-[1.01] service-card cursor-pointer transition-all`}
             onClick={() => {
               setSelectedType("vivoz");
             }}
@@ -93,7 +93,7 @@ export default function Services() {
               selectedType === "transit"
                 ? "border-customYellow"
                 : "border-bgGray"
-            } border-b-0 rounded-t-[20px] hover:border-customYellow service-card cursor-pointer transition-all`}
+            } border-b-0 rounded-t-[20px] hover:border-customYellow hover:scale-[1.01] service-card cursor-pointer transition-all`}
             onClick={() => {
               setSelectedType("transit");
             }}

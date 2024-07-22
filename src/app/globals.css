@@ -5,6 +5,16 @@
 @import url("../css/reviewsSlider.css");
 @import url("../css/embla.css");
 
+button {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+button:hover {
+    transform: scale(1.01);
+}
+
 .country {
     fill: #e2ce0a;
     stroke: white;

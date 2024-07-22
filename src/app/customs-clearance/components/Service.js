@@ -11,8 +11,8 @@ export default function Service({ title, text, isActive }) {
   return (
     <div
       className={`grid grid-cols-[24px_1fr] gap-11 SM:gap-5 border-2 ${
-        isDisabled ? "border-bgGray" : "border-customPurple"
-      }  rounded-[20px] items-center relative`}
+        isDisabled ? "border-bgGray" : "border-customPurple hover:scale-[1.01]"
+      }  rounded-[20px] items-center relative transition-all`}
     >
       <button
         className={`top-0 left-0 h-full w-full z-50 rounded-2xl ${

@@ -10,7 +10,7 @@ export default function ModalWithFormMap({ isOpen, onOpenChange, title }) {
     const onSubmitBtn = e => {
         e.preventDefault();
         setButtonText("Отправка...");
-        fetch("../../php/sendMail.php", {
+        fetch("/public/php/sendMail.php", {
             method: "POST",
             body: {
                 name: "Ben",

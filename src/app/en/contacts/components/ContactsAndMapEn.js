@@ -13,36 +13,39 @@ export default function ContactsAndMapEn() {
                     <div className="flex flex-col gap-5">
                         <h3 className="text-2xl LG:text-xl font-bold SM:text-lg">Central office address</h3>
                         <div className="flex gap-5 items-center">
-                            <Image src={mapMarker} alt="" className="w-10 LG:w-8"/>
-                            <p className="SM:text-sm">Russia, Saint Petersburg, Beloostrovskaya St., 22, office 326</p>
+                            <Image src={mapMarker} alt="" className="w-10 LG:w-8" />
+                            <p className="SM:text-sm">
+                                Russia, Saint Petersburg, Finlyandskiy Prospekt, 4A, office 727 Petrovsky Fort Business
+                                Center
+                            </p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-5">
                         <h3 className="text-2xl LG:text-xl font-bold SM:text-lg">Office hours</h3>
                         <div className="flex gap-5 items-center">
-                            <Image src={calendar} alt="" className="w-10 LG:w-8"/>
+                            <Image src={calendar} alt="" className="w-10 LG:w-8" />
                             <p className="SM:text-sm">Monday to Friday, 10:00 AM - 6:00 PM (MSK)</p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-5">
                         <h3 className="text-2xl LG:text-xl font-bold SM:text-lg">Sales department</h3>
                         <div className="flex gap-5 items-center">
-                            <Image src={mail} alt="" className="w-10 LG:w-8"/>
-                            <p className="SM:text-sm">zayavka@hb-customs.ru</p>
+                            <Image src={mail} alt="" className="w-10 LG:w-8" />
+                            <p className="SM:text-sm">contact@hb-customs.ru</p>
                         </div>
                         <div className="flex gap-5 items-center">
-                            <Image src={phone} alt="" className="w-10 LG:w-8"/>
+                            <Image src={phone} alt="" className="w-10 LG:w-8" />
                             <p className="SM:text-sm">+7(812) 600-48-49 (доб. 209)</p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-5">
                         <h3 className="text-2xl LG:text-xl font-bold SM:text-lg">General inquiries</h3>
                         <div className="flex gap-5 items-center">
-                            <Image src={mail} alt="" className="w-10 LG:w-8"/>
+                            <Image src={mail} alt="" className="w-10 LG:w-8" />
                             <p className="SM:text-sm">info@hb-customs.ru</p>
                         </div>
                         <div className="flex gap-5 items-center">
-                            <Image src={phone} alt="" className="w-10 LG:w-8"/>
+                            <Image src={phone} alt="" className="w-10 LG:w-8" />
                             <p className="SM:text-sm">+7(812) 600-48-49</p>
                         </div>
                     </div>

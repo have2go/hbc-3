@@ -24,7 +24,7 @@ export default function MainEn() {
                     </h1>
                     <button
                         onClick={onOpen}
-                        className="bg-transparent text-3xl font-medium border-[5px] border-white text-white rounded-[20px] w-full max-w-[505px] h-20 XL:h-16 XL:text-[26px] LG:text-2xl LG:max-w-[450px] MD:border-[3px] SM:text-xl SM:border-[2px] MD:bg-white/60 SM:max-w-[300px]"
+                        className="bg-transparent text-3xl font-medium border-[3px] border-white text-white rounded-[20px] w-full max-w-[505px] h-20 XL:h-16 XL:text-[26px] LG:text-2xl LG:max-w-[450px] MD:border-[3px] SM:text-xl SM:border-[2px] MD:bg-white/60 SM:max-w-[300px] hover:bg-gradient-to-r from-[#F6E960] to-[#E4D119]  hover:border-2 hover:scale-[1.01] hover:text-black transition-all"
                     >
                         Get a free consultation
                     </button>

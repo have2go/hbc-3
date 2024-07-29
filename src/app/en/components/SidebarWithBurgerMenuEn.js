@@ -87,7 +87,7 @@ export function SidebarWithBurgerMenuEn() {
               <Link href="/en/payment-agent" className="">
                 <ListItem>Payment agent</ListItem>
               </Link>
-              <Link href="/en/in-development" className="">
+              <Link href="/en/customs-clearance" className="">
                 <ListItem>Customs clearance</ListItem>
               </Link>
               {/* <ListItem className="p-0" selected={open === 1}>

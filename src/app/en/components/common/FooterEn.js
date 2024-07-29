@@ -93,7 +93,7 @@ export default function FooterEn() {
           <Link href="/en/payment-agent" className="">
             <ListItem className="bg-palePurple">Payment agent</ListItem>
           </Link>
-          <Link href="/en/in-development" className="">
+          <Link href="/en/customs-clearance" className="">
             <ListItem className="bg-palePurple">Customs clearance</ListItem>
           </Link>
           <Link href="/en/contacts" className="">

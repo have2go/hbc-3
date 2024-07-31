@@ -7,7 +7,7 @@ export const import40 = {
                 in accordance with which goods are located and used in the customs territory of the Union without
                 restrictions on their possession, use and (or) disposal, provided for by international treaties and acts
                 in the field of customs regulation of foreign goods. Goods placed under customs procedure of release for
-                domestic consumption, purchase the status of the Union's goods.
+                domestic consumption, purchase the status of the Union&apos;s goods.
             </p>
             <p className="">
                 This procedure is mainly used in the direction of import (when importing a foreign product). The name of

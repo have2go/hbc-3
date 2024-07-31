@@ -9,7 +9,7 @@ export const svobTamZona = {
                 Foreign goods placed under the customs procedure of the free customs zone, they retain the status of
                 foreign goods, and the goods of the Union placed under the customs procedure of the free customs zone,
                 retain the status of goods The Union. But manufactured (received) goods from these goods acquire the
-                status of the Union's goods. Conditions of placement of goods – the purpose of the goods about its
+                status of the Union&apos;s goods. Conditions of placement of goods – the purpose of the goods about its
                 placement and (or) use by residents on the territory of the FEZ, or the commission by non-residents of
                 transactions with goods that do not change their characteristics.
             </p>

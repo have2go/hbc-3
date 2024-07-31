@@ -13,7 +13,7 @@ export const export10 = {
             <p className="">
                 For goods intended or intended for export from the customs the territory of the EAEU without its
                 re-importation, the export procedure is declared. There is a feature of this procedure – the presence of
-                a stamp of the customs authority The "release allowed" on the goods declaration does not mean that the
+                a stamp of the customs authority The &quot;release allowed&quot; on the goods declaration does not mean that the
                 export the product took place. The customs procedure of export will be considered completed only when in
                 the transport document (CMR, bill of lading, air/railway waybill) presented at the customs authority of
                 export together with The actual export of the goods will be confirmed. This is an important one a factor

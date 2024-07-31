@@ -11,20 +11,20 @@ import InternationalServicesEn from "./components/sections/InternationalServices
 import FooterEn from "./components/common/FooterEn";
 
 export default function HomeEn() {
-    return (
-        <section className="relative text-customGray" id="main">
-            <Image
-                src={mainBg}
-                alt="Highbrow Customs"
-                className="absolute top-0 left-0 -z-50 h-screen w-screen object-cover"
-            />
-            <MainEn />
-            <ServicesEn />
-            <AboutEn />
-            <GeographyEn />
-            <FormEn />
-            <InternationalServicesEn />
-            <FooterEn />
-        </section>
-    );
+  return (
+    <section className="relative text-customGray" id="main">
+      <Image
+        src={mainBg}
+        alt="Highbrow Customs"
+        className="absolute top-0 left-0 -z-50 h-screen w-screen object-cover"
+      />
+      <MainEn />
+      <ServicesEn />
+      <AboutEn />
+      <GeographyEn />
+      <FormEn />
+      <InternationalServicesEn />
+      <FooterEn />
+    </section>
+  );
 }

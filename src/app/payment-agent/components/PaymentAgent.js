@@ -2,7 +2,7 @@ import Section from "@/components/common/Section";
 
 export default function PaymentAgent() {
     return (
-        <Section title={"Платёжный агент"}>
+        <Section title={""}>
             <div className="flex flex-col gap-3 text-xl 2XL:text-base SM:text-sm">
                 <p className="leading-[120%]">
                     Сегодня многие бизнес в России сталкиваются с трудностями при осуществлении международных платежей.

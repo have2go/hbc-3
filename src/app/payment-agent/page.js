@@ -44,7 +44,7 @@ export default function Home() {
                     <Header />
                     <div className="h-full flex items-center">
                         <h1
-                            className={`text-white text-6xl leading-tight ${openSans.className} font-bold 2XL:text-4xl LG:text-3xl SM:text-2xl`}
+                            className={`text-white text-6xl leading-tight ${openSans.className} font-bold 2XL:text-5xl LG:text-3xl SM:text-2xl`}
                         >
                             Платёжный агент
                         </h1>

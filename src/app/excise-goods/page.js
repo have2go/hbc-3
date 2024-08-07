@@ -1,8 +1,5 @@
 "use client";
 import Image from "next/image";
-import mainBg from "/public/main-bg.jpg";
-import Main from "@/components/sections/Main";
-import headerBg from "/public/header-bg.jpg";
 import altBg from "/public/alt-bg.jpg";
 import { Open_Sans } from "next/font/google";
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -12,13 +9,10 @@ import ModalWithForm from "@/components/common/ModalWithForm";
 
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
-import Customs from "./components/Customs";
+import Goods from "./components/Goods";
 import Services from "./components/Services";
-import Stages from "./components/Stages";
-import Docs from "./components/Docs";
-import CustomsSeo from "./components/CustomsSeo";
 
-export default function Home() {
+export default function ExciseGoods() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     return (
@@ -35,16 +29,13 @@ export default function Home() {
                         <h1
                             className={`text-white text-6xl leading-tight ${openSans.className} font-bold 2XL:text-5xl LG:text-5xl MD:text-4xl SM:text-2xl`}
                         >
-                            Таможенное оформление
+                            Акцизные товары
                         </h1>
                     </div>
                 </div>
             </section>
-            <Customs />
+            <Goods />
             <Services />
-            <Stages />
-            <Docs />
-            <CustomsSeo />
             <Footer />
             <ModalWithForm isOpen={isOpen} onOpenChange={onOpenChange} title={"Получить консультацию"} />
         </main>

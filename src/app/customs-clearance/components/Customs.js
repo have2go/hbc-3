@@ -2,7 +2,7 @@ import Section from "@/components/common/Section";
 
 export default function Customs() {
     return (
-        <Section title={"Таможенное оформление"}>
+        <Section title={""}>
             <div className="flex flex-col gap-8 text-xl 2XL:text-base SM:text-sm SM:gap-5">
                 <p className="leading-[120%]">
                     Различают три направления перемещения товаров во внешнеэкономической   деятельности:

@@ -1,16 +1,10 @@
 "use client";
 import Image from "next/image";
-
-import mainBg from "/public/main-bg.jpg";
 import altBg from "/public/alt-bg.jpg";
-import headerBg from "/public/header-bg.jpg";
 
 import { Open_Sans } from "next/font/google";
 const openSans = Open_Sans({ subsets: ["latin"] });
 
-import { useDisclosure } from "@nextui-org/react";
-
-import Main from "@/components/sections/Main";
 import Header from "@/components/common/Header";
 import PaymentAgent from "./components/PaymentAgent";
 import HowItWorks from "./components/HowItWorks";
@@ -22,39 +16,23 @@ import YellowForm from "./components/YellowForm";
 import PaymentAgentSeo from "./components/PaymentAgentSeo";
 
 export default function Home() {
-    const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
     return (
         <main className="relative text-customGray">
-            {/* <Image
-                src={headerBg}
-                alt="Highbrow Customs"
-                className="absolute top-0 left-0 -z-50 h-[175px] w-screen object-cover shadow-lg SM:h-[150px]"
-            /> */}
             <Image
                 src={altBg}
                 alt="Highbrow Customs"
-                className="absolute top-0 left-0 -z-50 h-[75vh] w-screen object-cover shadow-lg SM:h-[150px]"
+                className="absolute top-0 left-0 -z-50 h-[75vh] w-screen object-cover shadow-lg"
             />
-            <section className="relative max-w-[1690px] px-10 h-[75vh] SM:h-[150px]  mx-auto pt-10 text-black MD:px-5 SM:px-3 ">
-                {/* <div className=" mx-auto ">
-          <Header />
-        </div> */}
+            <section className="relative max-w-[1690px] px-10 h-[75vh]  mx-auto pt-10 text-black MD:px-5 SM:px-3 ">
                 <div className="flex flex-col justify-between h-4/5">
                     <Header />
                     <div className="h-full flex items-center">
                         <h1
-                            className={`text-white text-6xl leading-tight ${openSans.className} font-bold 2XL:text-5xl LG:text-3xl SM:text-2xl`}
+                            className={`text-white text-6xl leading-tight ${openSans.className} font-bold 2XL:text-5xl LG:text-5xl MD:text-4xl SM:text-2xl`}
                         >
-                            Платёжный агент
+                            Финансовая логистика
                         </h1>
                     </div>
-                    {/* <button
-            onClick={onOpen}
-            className="bg-transparent text-3xl font-medium border-[3px] border-black rounded-[20px] w-full max-w-[505px] h-20 XL:h-16 XL:text-[26px] LG:text-2xl LG:max-w-[450px] MD:border-[3px] SM:text-xl SM:border-[2px] MD:bg-white/60 SM:max-w-[300px] hover:bg-gradient-to-r from-[#F6E960] to-[#E4D119]  hover:border-2 hover:scale-[1.01] transition-all"
-          >
-            Получите консультацию
-          </button> */}
                 </div>
             </section>
             <PaymentAgent />

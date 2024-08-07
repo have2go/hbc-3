@@ -31,7 +31,7 @@ export const import40 = {
         <li>
           <div className="flex gap-[10px] items-center">
             <span className="h-[10px] w-[10px] bg-customYellow rounded-full shrink-0" />
-            <p className=" text-xl 2XL:text-base SM:text-sm">
+            <p className="SM:text-sm">
               классификация товара в соответствии ТН ВЭД ЕАЭС (пример:
               электрокар - не автомобиль в привычном понимании, пошлины разные,
               разрешительные документы тоже разные);
@@ -41,7 +41,7 @@ export const import40 = {
         <li>
           <div className="flex gap-[10px] items-center">
             <span className="h-[10px] w-[10px] bg-customYellow rounded-full shrink-0" />
-            <p className=" text-xl 2XL:text-base SM:text-sm">
+            <p className="SM:text-sm">
               таможенная стоимость товара (она не всегда равна той цене, которую
               покупатель оплатил продавцу);
             </p>
@@ -50,7 +50,7 @@ export const import40 = {
         <li>
           <div className="flex gap-[10px] items-center">
             <span className="h-[10px] w-[10px] bg-customYellow rounded-full shrink-0" />
-            <p className=" text-xl 2XL:text-base SM:text-sm">
+            <p className="SM:text-sm">
               соблюдение запретов и ограничений (без фитоконтроля не ввезти
               бананы).
             </p>

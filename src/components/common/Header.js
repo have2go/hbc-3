@@ -36,7 +36,7 @@ export default function Header() {
                             pathname === "/payment-agent" ? "text-customYellow " : "text-white"
                         } hover:text-customYellow transition-all`}
                     >
-                        Платёжный агент
+                        Финансовая логистика
                     </Link>
                     <Link
                         href="/customs-clearance"
@@ -58,6 +58,14 @@ export default function Header() {
                     <Link href="/in-development" className="px-[5px] border-r">
                         О нас
                     </Link> */}
+                    <Link
+                        href="/excise-goods"
+                        className={`px-[5px] border-r ${
+                            pathname === "/excise-goods" ? "text-customYellow " : "text-white"
+                        } hover:text-customYellow transition-all`}
+                    >
+                        Акцизные товары
+                    </Link>
                     <Link
                         href="/contacts"
                         className={`px-[5px] ${

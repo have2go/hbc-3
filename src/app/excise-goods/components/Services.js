@@ -1,8 +1,8 @@
 import Section from "@/components/common/Section";
 import Link from "next/link";
 import Image from "next/image";
-import vvoz from "/public/vvoz.jpg";
-import vivoz from "/public/vivoz.jpg";
+import fizCover from "/public/fiz.jpg";
+import yurCover from "/public/yur.jpg";
 import trucks from "/public/trucks.jpg";
 import Service from "./Service";
 import { services } from "@/constants/services";
@@ -31,7 +31,7 @@ export default function Services() {
     return (
         <Section title={"Ввоз автомобилей"}>
             <div className="flex flex-col pb-20 SM:pb-10">
-                <div className="py-16 w-full max-w-[1000px] pb-10 mx-auto grid grid-cols-2 gap-10 1.5XL:w-full 1.5XL:gap-5 XL:pt-6 MD:grid-cols-1 SM:pt-0 SM:pb-6 SM:max-w-[320px] justify-between">
+                <div className="py-16 w-full max-w-[1000px] mx-auto grid grid-cols-2 gap-10 1.5XL:w-full 1.5XL:gap-5 XL:pt-6 MD:grid-cols-1 SM:pt-0 SM:pb-6 SM:max-w-[320px] justify-between">
                     <div
                         className={`border-2 ${
                             selectedType === "fiz" ? "border-customYellow" : "border-bgGray"
@@ -46,7 +46,7 @@ export default function Services() {
                             }`}
                         ></div>
                         <Image
-                            src={vvoz}
+                            src={fizCover}
                             className={`${
                                 selectedType === "fiz" ? "saturate-100" : "saturate-0"
                             } hover:saturate-100 transition-all service-card__image w-full`}
@@ -70,7 +70,7 @@ export default function Services() {
                             }`}
                         ></div>
                         <Image
-                            src={vivoz}
+                            src={yurCover}
                             className={`${
                                 selectedType === "yur" ? "saturate-100" : "saturate-0"
                             } hover:saturate-100 transition-all service-card__image w-full`}

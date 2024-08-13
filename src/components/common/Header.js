@@ -29,11 +29,11 @@ export default function Header() {
                     </Link>
                     <p className="text-xs pt-4 ">Услуги для международной торговли</p>
                 </div>
-                <div className="flex text-white text-base font-bold text-nowrap 2XL:text-sm ">
+                <div className="flex text-white text-base font-bold text-nowrap 2XL:text-sm 1.5XL:text-xs">
                     <Link
                         href="/payment-agent"
                         className={`px-[5px] border-r ${
-                            pathname === "/payment-agent" ? "text-customYellow " : "text-white"
+                            pathname === "/payment-agent" ? "text-customPurple " : "text-white"
                         } hover:text-customYellow transition-all`}
                     >
                         Финансовая логистика
@@ -41,35 +41,31 @@ export default function Header() {
                     <Link
                         href="/customs-clearance"
                         className={`px-[5px] border-r ${
-                            pathname === "/customs-clearance" ? "text-customYellow " : "text-white"
+                            pathname === "/customs-clearance" ? "text-customPurple " : "text-white"
                         } hover:text-customYellow transition-all`}
                     >
                         Таможенное оформление
                     </Link>
-                    {/* <Link href="/in-development" className="px-[5px] border-r">
-                        Акцизные товары
-                    </Link>
-                    <Link href="/in-development" className="px-[5px] border-r">
-                        Поручительство
-                    </Link>
-                    <Link href="/in-development" className="px-[5px] border-r">
-                        Логистика
-                    </Link>
-                    <Link href="/in-development" className="px-[5px] border-r">
-                        О нас
-                    </Link> */}
                     <Link
                         href="/excise-goods"
                         className={`px-[5px] border-r ${
-                            pathname === "/excise-goods" ? "text-customYellow " : "text-white"
+                            pathname === "/excise-goods" ? "text-customPurple " : "text-white"
                         } hover:text-customYellow transition-all`}
                     >
                         Акцизные товары
                     </Link>
                     <Link
+                        href="/international-shipping"
+                        className={`px-[5px] border-r ${
+                            pathname === "/international-shipping" ? "text-customPurple " : "text-white"
+                        } hover:text-customYellow transition-all`}
+                    >
+                        Международные перевозки
+                    </Link>
+                    <Link
                         href="/contacts"
                         className={`px-[5px] ${
-                            pathname === "/contacts" ? "text-customYellow " : "text-white"
+                            pathname === "/contacts" ? "text-customPurple " : "text-white"
                         } hover:text-customYellow transition-all`}
                     >
                         Контакты

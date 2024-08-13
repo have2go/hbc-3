@@ -28,6 +28,9 @@ export default function Footer() {
                     <Link href="/excise-goods" className="">
                         <ListItem className="bg-palePurple">Акцизные товары</ListItem>
                     </Link>
+                    <Link href="/international-shipping" className="">
+                        <ListItem className="bg-palePurple">Международные перевозки</ListItem>
+                    </Link>
                     <Link href="/contacts" className="">
                         <ListItem className="bg-palePurple">Контакты</ListItem>
                     </Link>

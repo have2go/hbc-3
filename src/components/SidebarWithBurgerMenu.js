@@ -64,41 +64,6 @@ export function SidebarWithBurgerMenu() {
                             <Link href="/payment-agent" className="">
                                 <ListItem>Финансовая логистика</ListItem>
                             </Link>
-                            {/* <ListItem className="p-0" selected={open === 1}>
-                                <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3">
-                                    <Typography
-                                        color="blue-gray"
-                                        className={` ${montserrat.className} mr-auto font-normal`}
-                                    >
-                                        Таможенное оформление
-                                    </Typography>
-                                </AccordionHeader>
-                            </ListItem>
-                            <AccordionBody className="py-1">
-                                <List className="p-0">
-                                    <ListItem>
-                                        <Link href="/in-development" className={`${montserrat.className}`}>
-                                            Экспорт
-                                        </Link>
-                                    </ListItem>
-
-                                    <ListItem>
-                                        <Link href="/in-development" className={`${montserrat.className}`}>
-                                            Импорт
-                                        </Link>
-                                    </ListItem>
-                                    <ListItem>
-                                        <Link href="/in-development" className={`${montserrat.className}`}>
-                                            Транзит
-                                        </Link>
-                                    </ListItem>
-                                    <ListItem>
-                                        <Link href="/in-development" className={`${montserrat.className}`}>
-                                            Поручительство
-                                        </Link>
-                                    </ListItem>
-                                </List>
-                            </AccordionBody> */}
                             <ListItem>
                                 <Link href="/customs-clearance" className="">
                                     Таможенное оформление
@@ -109,25 +74,15 @@ export function SidebarWithBurgerMenu() {
                                     Акцизные товары
                                 </Link>
                             </ListItem>
-                            {/* <ListItem>
-                                <Link href="/in-development" className="">
-                                    Акцизные товары
+                            <ListItem>
+                                <Link href="/international-shipping" className="">
+                                    Международные перевозки
                                 </Link>
                             </ListItem>
-                            <ListItem>
-                                <Link href="/in-development" className="">
-                                    Логистика
-                                </Link>
-                            </ListItem> */}
                         </Accordion>
 
                         <hr className="my-2 border-blue-gray-50" />
-                        {/* <ListItem>
-                            <Link href="/in-development" className="">
-                                О нас
-                            </Link>
-                        </ListItem> */}
-
+ 
                         <Link href="/contacts" className="">
                             <ListItem>Контакты</ListItem>
                         </Link>

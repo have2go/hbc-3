@@ -18,7 +18,6 @@ import Rail from "./components/Rail";
 import Multimodal from "./components/Multimodal";
 import Auto from "./components/Auto";
 
-
 export default function Home() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -41,8 +40,8 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <Auto />
             <Shipping />
+            <Auto />
             <Air />
             <Rail />
             <Multimodal />

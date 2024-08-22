@@ -16,6 +16,7 @@ import Shipping from "./components/Shipping";
 import Air from "./components/Air";
 import Rail from "./components/Rail";
 import Multimodal from "./components/Multimodal";
+import Auto from "./components/Auto";
 
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <Auto />
             <Shipping />
             <Air />
             <Rail />

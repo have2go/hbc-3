@@ -47,7 +47,7 @@ export default function Rail() {
                     случае необходимости застрахуем перевозку и отправим груз в заданном направлении.
                 </p>
 
-                <Image src={rail} alt="Air shipping" className="w-full rounded-3xl" />
+                <Image src={rail} alt="Rail shipping" className="w-full rounded-3xl" />
             </div>
         </Section>
     );

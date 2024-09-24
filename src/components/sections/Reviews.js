@@ -1,12 +1,12 @@
-"use client";
+// "use client";
 
-import Section from "../common/Section";
-import ReviewsSlider from "../ReviewsSlider";
+// import Section from "../common/Section";
+// import ReviewsSlider from "../ReviewsSlider";
 
-export default function Reviews() {
-    return (
-        <Section title={"Отзывы"}>
-            <ReviewsSlider />
-        </Section>
-    );
-}
+// export default function Reviews() {
+//     return (
+//         <Section title={"Отзывы"}>
+//             <ReviewsSlider />
+//         </Section>
+//     );
+// }

@@ -3,6 +3,7 @@ import { Providers } from "./providers";
 
 import { Inter, Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
             <body className={`${montserrat.className}`}>
                 <Providers>{children}</Providers>
             </body>
+            <Script id="recaptcha" src={`https://www.google.com/recaptcha/api.js`} />
         </html>
     );
 }

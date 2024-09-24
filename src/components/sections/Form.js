@@ -9,7 +9,7 @@ export default function Form({ title, subtitle }) {
 
     const form = useRef();
 
-    const sendEmail = e => {
+    function sendEmail(e) {
         e.preventDefault();
         setButtonText("Отправка...");
         emailjs
@@ -71,10 +71,12 @@ export default function Form({ title, subtitle }) {
                     <div className="col-start-1 col-end-4 flex gap-5 SM:col-end-auto SM:flex-col">
                         <button
                             type="submit"
-                            className={`h-12 ${
+                            className={`g-recaptcha h-12 ${
                                 isLoaded ? "bg-[#7d7] text-white" : "bg-gradient-to-r from-[#F6E960] to-[#E4D119]"
                             } px-5 max-w-72 w-full rounded font-medium`}
                             disabled={isLoaded}
+                            data-sitekey="6LfelU0qAAAAAKHsA5awCQYfuwH-6v58obYJrBGD"
+                            data-callback="sendEmail"
                         >
                             {buttonText}
                         </button>
